@@ -13,6 +13,7 @@
     <title>Portafolio Técnico en Informática</title>
 </head>
 <body>
+    <!-- Encabezado principal con navegación y presentación inicial -->
     <header class="hero" id="home">
         <nav class="navbar">
             <a href="#home" class="logo">Informática Administrativa</a>
@@ -44,18 +45,31 @@
     </header>
     
     <main>
-         <section class="section" id="about">
+        <!-- Ventana emergente de bienvenida que se muestra al cargar la página -->
+        <div id="welcome-modal" class="welcome-modal" aria-hidden="true">
+            <div class="welcome-modal-content">
+                <h2>¡Hola!</h2>
+                <p>Bienvenido a mi portafolio. Gracias por visitar mi sitio.</p>
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Bienvenida al portafolio" class="welcome-modal-image">
+                <button id="close-welcome-modal" class="btn" type="button">Continuar</button>
+            </div>
+        </div>
+
+         <!-- Sección sobre mí con una breve descripción personal -->
+        <section class="section" id="about">
             <h2>Sobre mí</h2>
             <div class="contact-box about-box">
                 <div class="about-content">
                     <div class="about-text">
                         <p>Soy una persona comprometida con el apoyo tecnológico y administrativo, con enfoque en la organización, el servicio al usuario y el buen funcionamiento de los equipos y procesos informáticos.</p>
+                        <p>Me gusta mantener un equilibrio entre lo profesional y lo personal, por eso disfruto de actividades que me ayudan a relajarme y a seguir creciendo. Soy fan del café, de ver series, disfrutar del anime y pasar tiempo jugando videojuegos cuando quiero desconectar.</p>
                     </div>
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Persona trabajando en tecnología y administración">
                 </div>
             </div>
         </section>
 
+        <!-- Sección de servicios con bloques desplegables -->
         <section class="section" id="services">
             <h2>Servicios</h2>
             <div class="cards">
@@ -98,6 +112,7 @@
             </div>
         </section>
 
+        <!-- Sección de habilidades destacadas -->
         <section class="section" id="skills">
             <h2>Habilidades</h2>
             <div class="tags">
@@ -110,6 +125,7 @@
             </div>
         </section>
 
+        <!-- Sección de licencias con carrusel de contenido -->
         <section class="section" id="projects">
             <h2>Licencias que ofrezco</h2>
             <div class="license-carousel" aria-label="Carrusel de licencias">
@@ -160,6 +176,7 @@
             </div>
         </section>
 
+        <!-- Pie de página con información de contacto -->
         <footer class="section footer-contact" id="contact">
             <h2>Contacto</h2>
             <div class="contact-box contact-card">
@@ -191,6 +208,16 @@
             </div>
         </footer>
     </main>
+
+    <!-- Botones flotantes para WhatsApp y volver al inicio -->
+    <div class="floating-actions" aria-label="Acciones rápidas">
+        <a href="https://wa.me/521234567890" class="floating-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+            <span>💬</span>
+        </a>
+        <button class="floating-btn scroll-top" type="button" aria-label="Volver al inicio">
+            <span>↑</span>
+        </button>
+    </div>
 
     <script src="script.js"></script>
 </body>
