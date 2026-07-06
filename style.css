@@ -189,6 +189,71 @@ body {
     margin-top: 1.4rem;
 }
 
+.service-item {
+    padding: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-item[open] {
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.service-summary {
+    list-style: none;
+    cursor: pointer;
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem;
+    position: relative;
+}
+
+.service-summary::-webkit-details-marker {
+    display: none;
+}
+
+.service-summary::after {
+    content: "+";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.service-item[open] .service-summary::after {
+    content: "−";
+}
+
+.service-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.service-summary h3 {
+    margin: 0;
+}
+
+.service-summary p {
+    margin: 0;
+}
+
+.service-details {
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px solid var(--border);
+    margin-top: 0.2rem;
+}
+
+.service-details p {
+    margin-top: 0.8rem;
+    color: var(--text);
+}
+
+.service-item:hover {
+    transform: translateY(-2px);
+}
+
 .license-carousel {
     margin-top: 1.4rem;
     display: block;
