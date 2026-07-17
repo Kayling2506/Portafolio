@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Luis Enrique Enrique Ramirez">
-    <meta name="description" content="Portafolio profesional de un técnico en informática">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="técnico en informática, soporte técnico, mantenimiento de equipos, redes">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Portafolio de un Técnico en Informática Administrativa, ofreciendo soporte informático, gestión de procesos y mantenimiento de equipos.">
+    <meta name="keywords" content="Técnico en Informática, Soporte Informático, Gestión de Procesos, Mantenimiento de Equipos, Portafolio Técnico">
+    <meta name="author" content="Luis Enrique Ramirez">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Portafolio Técnico en Informática</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!--Fuentes de Texto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Portafolio Técnico en Informática - Hero Banner</title>
 </head>
 <body>
-    <!-- Encabezado principal con navegación y presentación inicial -->
+
     <header class="hero" id="home">
+        <!-- Navegación Flotante -->
         <nav class="navbar">
             <a href="#home" class="logo">Informática Administrativa</a>
 
-            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" id="menuBtn">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <ul class="nav-links" id="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#skills">Habilidades</a></li>
@@ -33,192 +40,101 @@
             </ul>
         </nav>
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="eyebrow">Soporte | Gestión | Office | Mantenimiento</p>
-                <h1>Apoyo administrativo y técnico para una operación eficiente.</h1>
-                <p>Ofrezco soporte informático, organización de procesos, mantenimiento básico de equipos y asistencia en herramientas de oficina con enfoque profesional y responsable.</p>
-                <a href="#contact" class="btn">Solicitar información</a>
+        <!-- Cuadrícula Principal -->
+        <div class="hero-split-container">
+            <!-- Sección Izquierda (Azul) -->
+            <div class="hero-left">
+                <!-- Figuras decorativas sutiles -->
+                <div class="deco-dots deco-dots-left"></div>
+                <div class="deco-zigzag deco-zigzag-left"></div>
+
+                <div class="hero-left-content">
+                    <p class="eyebrow">Soporte | Gestión | Office | Mantenimiento</p>
+                    <h1>Técnico en <br><span class="highlight-text">Informática.</span></h1>
+                    <p class="hero-description">Ofrezco soporte informático, organización de procesos, mantenimiento básico de equipos y asistencia en herramientas de oficina con enfoque profesional y responsable.</p>
+                    <a href="#contact" class="btn-hero">Solicitar información</a>
+                </div>
+
+                <!-- Footer del banner con columnas informativas -->
+                <div class="hero-left-footer">
+                    <div class="hero-foot-col">
+                        <strong>Soporte Proactivo</strong>
+                        <p>Optimización y mantenimiento preventivo para evitar interrupciones de sistema.</p>
+                    </div>
+                    <div class="hero-foot-col">
+                        <strong>Gestión Eficiente</strong>
+                        <p>Organización de archivos, bases de datos y herramientas de oficina a tu medida.</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- Sección Derecha (Lima) -->
+            <div class="hero-right">
+                <div class="deco-dots deco-dots-right"></div>
+                <div class="deco-zigzag deco-zigzag-right"></div>
+                
+                <div class="deco-diamonds">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Perfil Superpuesta -->
+            <div class="hero-profile-container">
+                <div class="profile-frame">
+                    <!-- Recuerda apuntar esta ruta a la ubicación de tu imagen -->
+                    <img src="img/erasebg-transformed.png" alt="Luis Enrique Ramirez" class="profile-img">
+                </div>
+            </div>
         </div>
     </header>
+    <section class="tech-hero-banner">
     
-    <main>
-        <!-- Ventana emergente de bienvenida que se muestra al cargar la página -->
-        <div id="welcome-modal" class="welcome-modal" aria-hidden="true">
-            <div class="welcome-modal-content">
-                <h2>¡Hola!</h2>
-                <p>Bienvenido a mi portafolio. Gracias por visitar mi sitio.</p>
-                <img src="img/erasebg-transformed.png" alt="Bienvenida al portafolio" class="welcome-modal-image">
-                <button id="close-welcome-modal" class="btn" type="button">Continuar</button>
+    <!-- Destello de fondo de alta gama (Glow Effect) -->
+    <div class="tech-glow"></div>
+    <!-- Rejilla de puntos decorativos -->
+    <div class="tech-grid-dots"></div>
+
+    <div class="tech-hero-container">
+        
+        <!-- Columna Izquierda: Título Principal de Impacto -->
+        <div class="tech-hero-left">
+            <span class="tech-badge">SISTEMAS DE ALTO RENDIMIENTO</span>
+            <h1>Velocidad sin precedentes.<br>Máxima fiabilidad.</h1>
+        </div>
+        
+        <!-- Columna Derecha: Texto de bienvenida y Acción -->
+        <div class="tech-hero-right">
+            <div class="tech-accent-block">
+                <p>Este es el espacio para dar la bienvenida a los visitantes del sitio. Capta su atención con un texto que explique claramente de qué trata el sitio. Puedes añadir una imagen o un video atractivos.</p>
+            </div>
+            <div class="tech-action-group">
+                <a href="#contact" class="btn-coral-large">Más información</a>
+                <a href="#proyectos" class="btn-secondary-dark">Ver proyectos →</a>
             </div>
         </div>
 
-         <!-- Sección sobre mí con una breve descripción personal -->
-        <section class="section" id="about">
-            <h2>Sobre mí</h2>
-            <div class="contact-box about-box">
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Soy una persona comprometida con el apoyo tecnológico y administrativo, con enfoque en la organización, el servicio al usuario y el buen funcionamiento de los equipos y procesos informáticos.</p>
-                        <p>Me gusta mantener un equilibrio entre lo profesional y lo personal, por eso disfruto de actividades que me ayudan a relajarme y a seguir creciendo. Soy fan del café, de ver series, disfrutar del anime y pasar tiempo jugando videojuegos cuando quiero desconectar.</p>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Persona trabajando en tecnología y administración">
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de servicios con bloques desplegables -->
-        <section class="section" id="services">
-            <h2>Servicios</h2>
-            <div class="cards">
-                <details class="card service-item">
-                    <summary class="service-summary">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Soporte técnico en computadora">
-                        <div class="service-title-block">
-                            <h3>Soporte administrativo</h3>
-                            <p>Asistencia en procesos informáticos, control de equipos y organización de tareas tecnológicas del entorno laboral.</p>
-                        </div>
-                    </summary>
-                    <div class="service-details">
-                        <p>Mi labor incluye apoyar en la organización de tareas digitales, mantener al día los procesos del área y ofrecer una atención cercana para que la operación diaria sea más fluida.</p>
-                    </div>
-                </details>
-                <details class="card service-item">
-                    <summary class="service-summary">
-                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80" alt="Mantenimiento de equipos informáticos">
-                        <div class="service-title-block">
-                            <h3>Mantenimiento básico</h3>
-                            <p>Instalación, actualización y revisión preventiva para mantener operativos los equipos de oficina.</p>
-                        </div>
-                    </summary>
-                    <div class="service-details">
-                        <p>Reviso el estado de los equipos, realizo mantenimiento preventivo, ayudo a resolver fallas sencillas y procuro que cada computadora funcione con estabilidad.</p>
-                    </div>
-                </details>
-                <details class="card service-item">
-                    <summary class="service-summary">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Herramientas de oficina y redes">
-                        <div class="service-title-block">
-                            <h3>Herramientas de oficina</h3>
-                            <p>Apoyo en el uso de Microsoft Office, manejo de archivos, conectividad y recursos digitales del área administrativa.</p>
-                        </div>
-                    </summary>
-                    <div class="service-details">
-                        <p>Brindo apoyo práctico con Microsoft Office, organización de archivos, gestión de correos y solución de problemas básicos de conectividad para que el trabajo cotidiano sea más eficiente.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <!-- Sección de habilidades destacadas -->
-        <section class="section" id="skills">
-            <h2>Habilidades</h2>
-            <div class="tags">
-                <span class="tag">Microsoft Office</span>
-                <span class="tag">Soporte de escritorio</span>
-                <span class="tag">Mantenimiento preventivo</span>
-                <span class="tag">Gestión de archivos</span>
-                <span class="tag">Administración básica de redes</span>
-                <span class="tag">Atención al usuario</span>
-            </div>
-        </section>
-
-        <!-- Sección de licencias con carrusel de contenido -->
-        <section class="section" id="projects">
-            <h2>Licencias que ofrezco</h2>
-            <div class="license-carousel" aria-label="Carrusel de licencias">
-                <button class="carousel-btn prev" type="button" aria-label="Anterior">&#10094;</button>
-                <div class="carousel-viewport">
-                    <div class="carousel-track">
-                        <article class="card license-slide">
-                            <div class="license-content">
-                                <div class="license-image-wrapper">
-                                    <img src="img/Microsoft-Office-365-Emblem.png" alt="Licencias de Office y Microsoft">
-                                </div>
-                                <div class="license-text">
-                                    <h3>Licencias de Office</h3>
-                                    <p>Ofrezco licencias de Microsoft Office para empresas y usuarios que necesitan productividad, seguridad y acceso profesional a sus herramientas.</p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="card license-slide">
-                            <div class="license-content">
-                                <div class="license-image-wrapper">
-                                    <img src="img/Imagen_Antivirus.jpg" alt="Licencias de antivirus">
-                                </div>
-                                <div class="license-text">
-                                    <h3>Licencias de antivirus</h3>
-                                    <p>Venta de licencias de protección para equipos con soluciones de Kaspersky, Norton, McAfee y ESET.</p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="card license-slide">
-                            <div class="license-content">
-                                <div class="license-image-wrapper">
-                                    <img src="img/Licencia_Profesionales.png" alt="Licencias de software de diseño y ingeniería">
-                                </div>
-                                <div class="license-text">
-                                    <h3>Licencias de software especializado</h3>
-                                    <p>También ofrezco licencias para Windows, AutoCAD, Revit y 3ds Max, ideales para diseño, ingeniería y uso técnico.</p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <button class="carousel-btn next" type="button" aria-label="Siguiente">&#10095;</button>
-                <div class="carousel-dots" aria-label="Selector de licencias">
-                    <button class="dot active" type="button" aria-label="Ir a la licencia 1"></button>
-                    <button class="dot" type="button" aria-label="Ir a la licencia 2"></button>
-                    <button class="dot" type="button" aria-label="Ir a la licencia 3"></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pie de página con información de contacto -->
-        <footer class="section footer-contact" id="contact">
-            <h2>Contacto</h2>
-            <div class="contact-box contact-card">
-                <div class="contact-left">
-                    <h3>Contáctame</h3>
-                    <p>Disponible para apoyo administrativo, soporte informático y mantenimiento de equipos en entornos de oficina.</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-                        </a>
-                        <a href="https://www.indeed.com" target="_blank" aria-label="Indeed" title="Indeed">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111498.png" alt="Indeed">
-                        </a>
-                        <a href="https://www.occ.com.mx" target="_blank" aria-label="OCC" title="OCC">
-                            <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="OCC">
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <div class="contact-item">
-                        <span class="contact-label">Llamame:</span>
-                        <a href="tel:+521234567890" class="contact-value">+52 123 456 7890</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">Correo:</span>
-                        <a href="mailto:tucorreo@example.com" class="contact-value">tucorreo@example.com</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </main>
-
-    <!-- Botones flotantes para WhatsApp y volver al inicio -->
-    <div class="floating-actions" aria-label="Acciones rápidas">
-        <a href="https://wa.me/521234567890" class="floating-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-            <span><img src="img/Icon/Whatsapp_icon-icons.com_66931.png" alt="WhatsApp" width="60px" height="60px"></span></span>
-        </a>
-        <button class="floating-btn scroll-top" type="button" aria-label="Volver al inicio">
-            <span>↑</span>
-        </button>
     </div>
+    
+    <!-- Indicador de scroll discreto abajo al centro -->
+    <div class="tech-scroll-indicator">
+        <span></span>
+    </div>
+</section>
+    <!-- Script simple para controlar el menú hamburguesa en móviles -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
 
-    <script src="script.js"></script>
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Animación sencilla de accesibilidad para el menú
+            const expanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+            menuBtn.setAttribute('aria-expanded', !expanded);
+        });
+    </script>
 </body>
 </html>
