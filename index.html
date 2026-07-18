@@ -23,7 +23,7 @@
     <header class="hero" id="home">
         <!-- Navegación Flotante -->
         <nav class="navbar">
-            <a href="#home" class="logo">Informática Administrativa</a>
+            <a href="#home" class="logo">Técnico en Informática</a>
 
             <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" id="menuBtn">
                 <span></span>
@@ -99,20 +99,20 @@
 
     <div class="tech-hero-container">
         
-        <!-- Columna Izquierda: Título Principal de Impacto -->
+        <!-- Columna Izquierda: Título enfocado en Soporte y Estabilidad -->
         <div class="tech-hero-left">
-            <span class="tech-badge">SISTEMAS DE ALTO RENDIMIENTO</span>
-            <h1>Velocidad sin precedentes.<br>Máxima fiabilidad.</h1>
+            <span class="tech-badge">Soporte Técnico & Infraestructura</span>
+            <h1>Sistemas sin fallas.<br>Rendimiento óptimo.</h1>
         </div>
         
-        <!-- Columna Derecha: Texto de bienvenida y Acción -->
+        <!-- Columna Derecha: Texto de enfoque técnico y Acciones -->
         <div class="tech-hero-right">
             <div class="tech-accent-block">
-                <p>Este es el espacio para dar la bienvenida a los visitantes del sitio. Capta su atención con un texto que explique claramente de qué trata el sitio. Puedes añadir una imagen o un video atractivos.</p>
+                <p style="text-align: justify;">Especialista en mantenimiento preventivo, diagnóstico avanzado y optimización de sistemas. Garantizo la continuidad operativa de tu infraestructura tecnológica, resolviendo incidencias críticas y configurando tus equipos y redes para que trabajen siempre a su máxima capacidad.</p>
             </div>
             <div class="tech-action-group">
-                <a href="#contact" class="btn-coral-large">Más información</a>
-                <a href="#proyectos" class="btn-secondary-dark">Ver proyectos →</a>
+                <a href="#contacto" class="btn-coral-large">Solicitar soporte</a>
+                <a href="#servicios" class="btn-secondary-dark">Ver servicios →</a>
             </div>
         </div>
 
@@ -123,18 +123,76 @@
         <span></span>
     </div>
 </section>
-    <!-- Script simple para controlar el menú hamburguesa en móviles -->
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const navLinks = document.getElementById('navLinks');
+<!-- Sección de Servicios Integrada -->
+<section class="services-section">
+    <!-- Bloque Superior Oscuro -->
+    <div class="services-top-area">
+        <div class="services-header-container">
+            <h2>Nuestros servicios</h2>
+            <p>Diseño, implementación y mantenimiento de soluciones tecnológicas robustas para asegurar la continuidad, eficiencia y crecimiento digital de tu infraestructura empresarial.</p>
+        </div>
+    </div>
 
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+    <!-- Bloque Inferior Claro que contendrá la Rejilla de Tarjetas -->
+    <div class="services-bottom-area">
+        <div class="services-grid">
             
-            // Animación sencilla de accesibilidad para el menú
-            const expanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
-            menuBtn.setAttribute('aria-expanded', !expanded);
-        });
-    </script>
+            <!-- Tarjeta 1 -->
+            <div class="service-card">
+                <div class="card-inner">
+                    <h3>Soluciones en la nube</h3>
+                    <p>Migración, gestión y optimización de infraestructura en entornos cloud. Garantizamos escalabilidad, alta disponibilidad y un control de accesos seguro para tu negocio.</p>
+                    <a href="#contacto" class="card-link">+ Leer más</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="service-card">
+                <div class="card-inner">
+                    <h3>Gestión de servicios TI</h3>
+                    <p>Soporte proactivo y administración integral de tus sistemas informáticos. Minimizamos los tiempos de inactividad mediante monitoreo constante y resolución eficiente de incidencias.</p>
+                    <a href="#contacto" class="card-link">+ Leer más</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="service-card">
+                <div class="card-inner">
+                    <h3>Recuperación de datos</h3>
+                    <p>Implementación de políticas de respaldo automatizadas (backups) y planes de contingencia ante desastres informáticos. Protegemos la información crítica de tu empresa.</p>
+                    <a href="#contacto" class="card-link">+ Leer más</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="service-card">
+                <div class="card-inner">
+                    <h3>Escritorio en la nube</h3>
+                    <p>Configuración de entornos virtuales de trabajo accesibles de forma remota y segura. Potencia la flexibilidad laboral de tu equipo con acceso controlado a sus herramientas básicas.</p>
+                    <a href="#contacto" class="card-link">+ Leer más</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="service-card">
+                <div class="card-inner">
+                    <h3>Administración de redes</h3>
+                    <p>Diseño, despliegue y seguridad de arquitecturas de red estructuradas. Optimizamos el tráfico de datos interno bajo estrictas normas y protocolos de seguridad informática.</p>
+                    <a href="#contacto" class="card-link">+ Leer más</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="service-card">
+                <div class="card-inner">
+                    <h3>Asesoramiento y soporte</h3>
+                    <p>Consultoría técnica especializada orientada a la toma de decisiones tecnológicas estratégicas. Auditorías informáticas completas alineadas a los objetivos de tu negocio.</p>
+                    <a href="#contacto" class="card-link">+ Leer más</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 </body>
 </html>
