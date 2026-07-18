@@ -602,21 +602,16 @@
 
 /* Zona superior oscura */
 .services-top-area {
-    background-color: var(--hero-indigo, #111111);
+    background-color: var(--hero-indigo, #000000);
     padding: 7rem 2rem 14rem 2rem; /* Espacio inferior amplio para la superposición */
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.services-header-container {
-    max-width: 800px;
-    width: 100%;
-}
-
 .services-header-container h2 {
     font-size: clamp(2.2rem, 4vw, 3.2rem);
-    color: #ffffff;
+    color: #00f314; /* Texto oscuro sobre fondo verde */
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
@@ -625,7 +620,7 @@
 .services-header-container p {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(252, 252, 252);
     margin: 0;
 }
 
@@ -674,7 +669,7 @@
 .card-inner {
     position: relative;
     background: #ffffff;
-    border: 1px solid rgba(18, 24, 41, 0.08);
+    border: 1px solid rgba(6, 66, 231, 0.08);
     padding: 3rem 2.2rem;
     height: 100%;
     display: flex;
@@ -682,14 +677,14 @@
     justify-content: space-between;
     align-items: flex-start;
     z-index: 2;
-    box-shadow: 0 15px 35px rgba(18, 24, 41, 0.03);
+    box-shadow: 0 15px 35px #275ff808;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Títulos internos de las tarjetas */
 .card-inner h3 {
     font-size: 1.45rem;
-    color: var(--text, #121829);
+    color: var(--text, #5575ce);
     font-weight: 700;
     margin-bottom: 1.2rem;
     line-height: 1.3;
@@ -708,7 +703,7 @@
 
 /* Enlaces "+ Leer más" */
 .card-link {
-    color: var(--card-accent);
+    color:  #17ff02;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 700;
@@ -808,3 +803,460 @@
             display: none; /* Se oculta en móviles para ahorrar espacio */
         }
     }
+
+    /* ==========================================
+   ESTILOS DE LA SECCIÓN SOBRE MÍ
+   ========================================== */
+
+.about-section {
+    width: 100%;
+    background-color: var(--bg, #f5f9ff); /* Se adapta suavemente al fondo claro de tu rejilla[cite: 1] */
+    padding: 8rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Equilibrio simétrico bento */
+    gap: 5rem;
+    align-items: center;
+}
+
+/* ==========================================
+   BLOQUE VISUAL: LA TERMINAL INTERACTIVA
+   ========================================== */
+.about-visual-panel {
+    position: relative;
+    width: 100%;
+}
+
+.tech-terminal {
+    width: 100%;
+    background-color: var(--hero-indigo, #111111); /* Fondo oscuro puro de tu paleta[cite: 1] */
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(18, 24, 41, 0.12);
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Cabecera del sistema */
+.terminal-header {
+    background-color: #1a1f2c;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.terminal-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.term-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.term-dot.red { background-color: #ff5f56; }
+.term-dot.yellow { background-color: #ffbd2e; }
+.term-dot.green { background-color: #27c93f; }
+
+.terminal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+}
+
+/* Interior de la consola */
+.terminal-body {
+    padding: 2rem;
+    font-family: 'Space Mono', monospace; /* Tu fuente técnica preferida[cite: 1] */
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+.term-line {
+    margin-bottom: 0.8rem;
+}
+
+.term-prompt {
+    color: var(--hero-lime, #17ff02); /* Color acento de tu marca[cite: 1] */
+    font-weight: 700;
+}
+
+.term-code {
+    font-family: 'Space Mono', monospace;
+    color: #a5b4fc;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    border-left: 2px solid var(--hero-lime, #17ff02);
+}
+
+/* Métricas de carga */
+.term-metrics {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.metric-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.metric-bar-bg {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.metric-bar-fill {
+    height: 100%;
+    background-color: var(--hero-lime, #17ff02); /* Barra de carga brillante[cite: 1] */
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(23, 255, 2, 0.5);
+}
+
+/* Cursor parpadeante */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.cursor {
+    color: var(--hero-lime, #17ff02);
+    animation: blink 1s infinite;
+}
+
+/* Marco exterior desfasado decorativo */
+.about-deco-frame {
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--hero-indigo, #111111); /* Combina con los marcos ya desarrollados[cite: 1] */
+    border-radius: 10px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ==========================================
+   BLOQUE TEXTO NARRATIVO
+   ========================================== */
+.about-content-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--hero-indigo, #111111);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-content-panel h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Tu tipografía base elegante[cite: 1] */
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.2;
+    color: var(--hero-indigo, #111111);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+}
+
+/* Párrafo con la justificación estilizada que manejamos */
+.about-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+}
+
+/* Rejilla de etiquetas de habilidades */
+.about-tags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+}
+
+.tech-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    background-color: #ffffff;
+    color: var(--hero-indigo, #111111);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(18, 24, 41, 0.1);
+    box-shadow: 0 4px 10px rgba(18, 24, 41, 0.02);
+}
+
+
+
+/* ==========================================
+   ADAPTABILIDAD RESPONSIVA
+   ========================================== */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr; /* Pasa a diseño vertical en móviles y tablets[cite: 1] */
+        gap: 4rem;
+    }
+    
+    .about-section {
+        padding: 5rem 1.5rem;
+    }
+    
+    .about-visual-panel {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+}
+
+/* ===================================================
+   RESPONSIVIDAD EXCLUSIVA: SECCIÓN SOBRE MÍ & TERMINAL
+   =================================================== */
+
+/* --- 1. TABLETS Y PANTALLAS MEDIANAS (Menos de 992px) --- */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr; /* La rejilla pasa de 2 columnas a 1 sola columna vertical */
+        gap: 3.5rem; /* Ajustamos la separación entre la terminal y el texto */
+    }
+
+    .about-section {
+        padding: 6rem 1.5rem;
+    }
+
+    /* Centramos el bloque de la terminal para que mantenga una proporción estética */
+    .about-visual-panel {
+        max-width: 550px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* --- 2. CELULARES ESTÁNDAR (Menos de 768px) --- */
+@media (max-width: 768px) {
+    .terminal-body {
+        padding: 1.25rem; /* Reducimos espacio interno para aprovechar el ancho de pantalla */
+        font-size: 0.85rem; /* Tipografía un poco más compacta para que no se encime */
+    }
+
+    .term-code {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* Ajustamos el marco decorativo para evitar que empuje la pantalla y genere scroll horizontal */
+    .about-deco-frame {
+        bottom: -10px;
+        left: -10px;
+    }
+
+    .about-content-panel h2 {
+        margin-bottom: 1.2rem;
+    }
+
+    .about-text {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+}
+
+/* --- 3. CELULARES ULTRA-COMPACTOS (Menos de 480px) --- */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 4rem 1rem;
+    }
+
+    .terminal-header {
+        padding: 0.6rem 1rem;
+    }
+
+    /* Ocultamos el título central "sys_profile.sh" en pantallas mini para que no choque con los círculos de colores */
+    .terminal-title {
+        display: none;
+    }
+
+    .terminal-body {
+        padding: 1rem;
+        font-size: 0.78rem;
+    }
+
+    .term-code {
+        font-size: 0.72rem;
+        white-space: pre-wrap; /* Clave: Obliga al código JSON a saltar de línea si el celular es muy angosto */
+    }
+
+    .metric-label {
+        font-size: 0.75rem;
+    }
+
+    /* Ajuste fino a las etiquetas de habilidades para que no se amontonen */
+    .about-tags-grid {
+        gap: 0.4rem;
+    }
+
+    .tech-tag {
+        font-size: 0.72rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* ===================================================
+   DISEÑO INNOVADOR: TARJETA EMBLEMA DE CIERRE (GLOW)
+   =================================================== */
+
+.tech-emblem-card {
+    position: relative;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    background: #111111; /* Color oscuro puro a juego con la terminal */
+    border: 1px solid rgba(23, 255, 2, 0.15); /* Borde sutil verde lima */
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(17, 17, 17, 0.15);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* El efecto "Glow" radial de fondo */
+.emblem-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(23, 255, 2, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.emblem-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+/* Contenedor del Icono Tecnológico */
+.emblem-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background: rgba(23, 255, 2, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(23, 255, 2, 0.3);
+}
+
+.emblem-icon svg {
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(0 0 5px rgba(23, 255, 2, 0.5));
+}
+
+/* Estilo del texto emotivo */
+.emblem-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #e2e8f0; /* Blanco suave técnico de alta legibilidad */
+    margin: 0;
+    text-align: left;
+}
+
+/* Efecto Hover interactivo */
+.tech-emblem-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(23, 255, 2, 0.4);
+    box-shadow: 0 25px 45px rgba(23, 255, 2, 0.05);
+}
+
+.about-content-panel blockquote {
+    border-left: 3px solid #17ff02; /* Color verde lima de tu paleta */
+    background: rgba(23, 255, 2, 0.03); 
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.about-content-panel blockquote strong {
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+/* ===================================================
+   ADAPTABILIDAD RESPONSIVA DE LA TARJETA EMBLEMA
+   =================================================== */
+@media (max-width: 576px) {
+    .tech-emblem-card {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .emblem-content {
+        flex-direction: column; /* Icono arriba y texto abajo en pantallas chicas */
+        gap: 1rem;
+    }
+
+    .emblem-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .emblem-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
