@@ -133,3 +133,13 @@ if (scrollTopButton) {
     });
 }
 
+     const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Animación sencilla de accesibilidad para el menú
+            const expanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+            menuBtn.setAttribute('aria-expanded', !expanded);
+        });
