@@ -53,5 +53,10 @@ const protectImages = () => {
     });
 };
 
-
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    }, false);
 
