@@ -123,9 +123,6 @@
             transition: all 0.3s ease;
         }
 
-        /* ==========================================
-           COLUMNA IZQUIERDA (CONTENIDO)
-           ========================================== */
         .hero-left {
             background-color: var(--hero-indigo);
             color: white;
@@ -217,9 +214,6 @@
             margin: 0;
         }
 
-        /* ==========================================
-           COLUMNA DERECHA (DISEÑO VISUAL LIMA)
-           ========================================== */
         .hero-right {
             background-color: var(--hero-lime);
             position: relative;
@@ -227,7 +221,7 @@
         }
 
         /* ==========================================
-           FOTO DE PERFIL SUPERPUESTA (CORREGIDA)
+           FOTO DE PERFIL SUPERPUESTA 
            ========================================== */
         .hero-profile-container {
             position: absolute;
@@ -525,21 +519,6 @@
         box-shadow: 0 10px 25px rgba(4, 126, 30, 0.397);
     }
 
-    /* Botón Secundario tipo Outline */
-    .btn-secondary-dark {
-        color: #000000;
-        text-decoration: none;
-        font-size: 0.95rem;
-        font-weight: 700;
-        padding: 1rem 1.5rem;
-        transition: color 0.2s ease, transform 0.2s ease;
-    }
-
-    .btn-secondary-dark:hover {
-        color: #59ff38;
-        transform: translateX(4px);
-    }
-
     /* ==========================================
        EFECTOS DE FONDO (GLOWS Y DOTS)
        ========================================== */
@@ -578,7 +557,7 @@
         transform: translateX(-50%);
         width: 24px;
         height: 40px;
-        border: 2px solid rgba(255, 255, 255, 0.452);
+        border: 2px solid rgba(61, 59, 59, 0.452);
         border-radius: 12px;
         display: flex;
         justify-content: center;
@@ -787,10 +766,7 @@
             gap: 1rem;
         }
 
-        .btn-coral-large, .btn-secondary-dark {
-            width: 100%;
-            text-align: center;
-        }
+
 
         .tech-scroll-indicator {
             display: none; /* Se oculta en móviles para ahorrar espacio */
