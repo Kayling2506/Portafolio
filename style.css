@@ -684,7 +684,7 @@
 }
 
 /* ==========================================
-   EFECTOS HOVER (ANIMACIÓN CORRECCIÓN)
+   EFECTOS HOVER (ANIMACIÓN)
    ========================================== */
 .service-card:hover .card-inner {
     transform: translateY(-4px);
