@@ -164,11 +164,14 @@
         }
 
         .hero-description {
-            font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 2.2rem;
-            line-height: 1.6;
-        }
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2.2rem;
+    line-height: 1.6;
+    /* Agrega estas dos líneas */
+    text-align: justify;
+    text-justify: inter-word;
+}
 
         /* Botón de acción destacado */
         .btn-hero {
