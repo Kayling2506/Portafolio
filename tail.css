@@ -42,3 +42,50 @@
     @keyframes blink { 50% { opacity: 0; } }
 
     
+    @media (max-width: 768px) {
+    .arcade-footer {
+        padding: 3rem 1rem 2rem 1rem; /* Reducimos padding lateral */
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem; /* Menos espacio entre secciones */
+    }
+    
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* AJUSTE CLAVE: Reducimos letra en móviles para que quepan los textos */
+    .footer-col h3 {
+        font-size: 0.9rem; /* Un poco más pequeño */
+        white-space: nowrap; /* Evita que el título se parta en dos líneas */
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-col a, 
+    .footer-col p, 
+    .inventory-bar span {
+        font-size: 0.85rem; /* Letra un poco más chica */
+    }
+    
+    .start-btn {
+        align-self: center;
+        padding: 0.6rem 1rem; /* Botón más compacto */
+        font-size: 0.9rem;
+    }
+    
+    /* Hacemos el alien un poco más pequeño para que no domine el espacio */
+    .pixel-alien i, 
+    .pixel-alien .p {
+        width: 4px;
+        height: 4px;
+    }
+
+    .alien-zone {
+        margin-bottom: 1.5rem; /* Ajuste de espacio */
+    }
+}
