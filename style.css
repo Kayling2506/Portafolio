@@ -226,7 +226,7 @@
         .hero-profile-container {
             position: absolute;
             top: 50%;
-            left: 60%; /* Alineado con el corte divisor del 60% */
+            left: 65%; /* Alineado con el corte divisor del 60% */
             width: 340px;
             height: 400px;
             z-index: 50;
