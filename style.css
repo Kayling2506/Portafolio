@@ -384,8 +384,8 @@
             .hero-profile-container {
                 left: 50%;
                 top: calc(100% - 190px); /* Posicionamiento centrado flotando entre secciones */
-                width: 280px;
-                height: 330px;
+                width: 260px;
+                height: 310px;
             }
 
             .hero-left-footer {
