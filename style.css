@@ -223,45 +223,48 @@
         /* ==========================================
            FOTO DE PERFIL SUPERPUESTA 
            ========================================== */
-        .hero-profile-container {
-            position: absolute;
-            top: 50%;
-            left: 60%; /* Alineado con el corte divisor del 60% */
-            width: 340px;
-            height: 400px;
-            z-index: 50;
-            animation: heroProfileFadeUp 1.1s ease-out both;
-        }
+  /* ==========================================
+   FOTO DE PERFIL SUPERPUESTA (CORREGIDA)
+   ========================================== */
+.hero-profile-container {
+    position: absolute;
+    top: 50%;
+    left: 60%; /* Alineado con el corte divisor del 60% */
+    width: 360px;  /* Ajustado para ser un cuadrado perfecto */
+    height: 360px; /* Ajustado para ser un cuadrado perfecto */
+    z-index: 50;
+    animation: heroProfileFadeUp 1.1s ease-out both;
+}
 
-        .profile-frame {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: #c3cfd9; /* Fondo de respaldo */
-            border-radius: 12px;
-        }
+.profile-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #c3cfd9; 
+    border-radius: 16px; /* Ligeramente más curvo para coincidir con el diseño */
+}
 
-        /* El marco decorativo blanco desfasado */
-        .profile-frame::before {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            right: -15px;
-            width: 100%;
-            height: 100%;
-            border: 2.5px solid #ffffff;
-            border-radius: 12px;
-            z-index: -1;
-            pointer-events: none;
-        }
+/* El marco decorativo blanco desfasado */
+.profile-frame::before {
+    content: '';
+    position: absolute;
+    top: 15px;  /* Desplaza el marco hacia abajo */
+    left: 15px; /* Desplaza el marco hacia la derecha */
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ffffff; /* Grosor refinado */
+    border-radius: 16px;
+    z-index: -1;
+    pointer-events: none;
+}
 
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-            display: block;
-        }
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px; /* Debe coincidir con el frame */
+    display: block;
+}
 
         /* ==========================================
            ELEMENTOS GEOMÉTRICOS DECORATIVOS
