@@ -3,41 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aviso de privacidad y acceso al portafolio técnico de Luis Enrique Ramírez.">
+    
     <!-- Seguridad y Privacidad Web -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
-    <title>Acceso | IT ADM & DEV</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:;">
+    
+    <link rel="icon" href="Logo.ico" type="image/x-icon">
+    <!-- Fuentes de Texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Acceso & Privacidad | IT ADM & DEV</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #0c0c0c;
-            color: #00FF00;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #050505;
+            color: #00FF41;
+            font-family: 'Space Mono', 'Courier New', Courier, monospace;
             margin: 0;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Efecto CRT Scanlines */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,255,65,0.06) 50%, rgba(0,0,0,0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
         }
 
         .terminal-container {
-            border: 1px solid #00FF00;
+            border: 2px solid #00FF41;
+            background: rgba(10, 10, 10, 0.95);
             padding: 40px;
-            width: 80%;
-            max-width: 650px;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+            width: 100%;
+            max-width: 680px;
+            box-shadow: 0 0 25px rgba(0, 255, 65, 0.25);
             text-align: center;
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
         }
 
         h1 {
             font-size: 1.8rem;
             margin-bottom: 25px;
-            text-shadow: 0 0 10px #00FF00;
+            color: #00FF41;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
             text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.7;
             margin-bottom: 20px;
             text-align: left;
@@ -45,43 +79,77 @@
         }
 
         .highlight {
-            color: #00FF00;
+            color: #00FF41;
             font-weight: bold;
         }
 
         .gif-container {
-            margin: 20px 0;
+            margin: 15px 0 25px 0;
         }
 
         .gif-container img {
-            border: 1px solid #00FF00;
+            border: 2px solid #00FF41;
             max-width: 180px;
             height: auto;
-            border-radius: 4px;
+            border-radius: 6px;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+
+        /* Noticia Oficial de Privacidad */
+        .privacy-official-note {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px dashed rgba(0, 255, 65, 0.4);
+            color: #00FF41;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            margin: 25px 0;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .term-prompt {
+            color: #00FF41;
+            font-weight: bold;
+        }
+
+        .blink {
+            animation: blink 1s steps(2, start) infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
         }
 
         .nav-link {
             display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
-            border: 1px solid #00FF00;
-            color: #00FF00;
+            margin-top: 20px;
+            padding: 12px 28px;
+            border: 2px solid #00FF41;
+            color: #00FF41;
+            background: transparent;
             text-decoration: none;
-            transition: all 0.3s;
+            transition: all 0.25s ease;
             font-weight: bold;
+            letter-spacing: 0.05em;
+            border-radius: 4px;
         }
 
         .nav-link:hover {
-            background-color: #00FF00;
-            color: #0c0c0c;
+            background-color: #00FF41;
+            color: #050505;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
+    <!-- Efecto CRT Scanlines -->
+    <div class="scanlines"></div>
+
     <div class="terminal-container">
         <div class="gif-container">
-            <!-- Anime wave gif -->
             <img src="img/greeting.gif" alt="Anime Greeting">
         </div>
         
@@ -95,7 +163,11 @@
         
         <p>Gracias por pasar a ver el proceso. No te vayas a llevar nada sin preguntar, pero fuera de eso, siéntete libre de curiosear todo lo que quieras.</p>
         
-        <p>Ahora, si no tienes nada más que romper, puedes volver al inicio.</p>
+        <div class="privacy-official-note">
+            🛡️ <strong>[ PROTOCOLO DE PRIVACIDAD ]:</strong> Este sitio web no utiliza cookies de rastreo publicitario ni recopila datos personales de navegación sin tu consentimiento.
+        </div>
+
+        <p><span class="term-prompt">tech@portfolio:~$</span> return_to_root.sh <span class="blink">█</span></p>
         
         <a href="index.html" class="nav-link">[ RETURN_TO_ROOT ]</a>
     </div>
