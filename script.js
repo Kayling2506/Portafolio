@@ -3,8 +3,9 @@
  * Manejo de navegación interactiva, ScrollSpy, copiado rápido y accesibilidad responsive.
  */
 
-// Variable para la gestión del temporizador de notificaciones (Toast)
+// Estado global para controlar la navegación sin repintados innecesarios
 let toastTimeout = null;
+let currentActiveId = undefined;
 
 /**
  * Inicialización principal al cargar el DOM
@@ -12,15 +13,19 @@ let toastTimeout = null;
 document.addEventListener('DOMContentLoaded', () => {
     const navAnchors = document.querySelectorAll('.nav-links a');
 
-    // Función auxiliar para actualizar enlace activo (ignora #home para mantener la portada limpia)
+    // Pre-cachear atributos de destino para no consultar el DOM en cada scroll
+    navAnchors.forEach(anchor => {
+        anchor.dataset.targetId = anchor.getAttribute('href')?.replace('#', '') || '';
+    });
+
+    // Función optimizada para actualizar enlace activo (solo muta el DOM si cambia la sección)
     const setActiveNav = (targetId) => {
+        const activeTarget = (!targetId || targetId === 'home') ? null : targetId;
+        if (currentActiveId === activeTarget) return;
+        currentActiveId = activeTarget;
+
         navAnchors.forEach((anchor) => {
-            const href = anchor.getAttribute('href')?.replace('#', '');
-            if (targetId && targetId !== 'home' && href === targetId) {
-                anchor.classList.add('active-link');
-            } else {
-                anchor.classList.remove('active-link');
-            }
+            anchor.classList.toggle('active-link', Boolean(activeTarget && anchor.dataset.targetId === activeTarget));
         });
     };
 
@@ -51,7 +56,7 @@ function initMobileMenu(navAnchors, setActiveNav) {
             navLinks.classList.remove('active');
             menuBtn.setAttribute('aria-expanded', 'false');
 
-            const targetId = link.getAttribute('href')?.replace('#', '');
+            const targetId = link.dataset.targetId || link.getAttribute('href')?.replace('#', '');
             setActiveNav(targetId);
         });
     });
