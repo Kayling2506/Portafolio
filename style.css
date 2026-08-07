@@ -1,14 +1,26 @@
 
         /* ==========================================
-           VARIABLES Y CONFIGURACIÓN INICIAL
+           TABLA DE CONTENIDOS (CSS INDEX)
+           1. Variables y Configuración Inicial
+           2. Estilos del Hero (Split-Screen)
+           3. Barra de Navegación (Navbar)
+           4. Sección Sobre Mí (Logs / Trayectoria)
+           5. Banner de Tecnología Aplicada (Labs)
+           6. Tarjetas de Servicios (Archive)
+           7. Pie de Página Retro (Arcade Footer)
+           8. Componentes Flotantes (Toast & Modal WhatsApp)
            ========================================== */
+
         :root {
-            --hero-indigo: #111111;      /* Fondo azul/violeta vibrante */
-            --hero-lime: #17ff02;        /* Fondo verde lima */
+            --color-bg-light: #f5f9ff;
+            --color-bg-dark: #0d0e12;
+            --color-text-main: #21364a;
+            --color-text-muted: #94a3b8;
+            --hero-lime: #17ff02;        /* Verde neón / lima principal */
+            --hero-indigo: #111111;      /* Fondo oscuro secundario */
             --hero-dark-text: #121829;   /* Contraste para textos oscuros */
-            --bg: #f5f9ff;
-            --text: #21364a;
-            --card-accent: #ff5f38;
+            --card-accent: #ff5f38;      /* Color de acento coral */
+            --border-glow: rgba(23, 255, 2, 0.25);
         }
 
         html {
@@ -684,7 +696,7 @@
 /* Títulos internos de las tarjetas */
 .card-inner h3 {
     font-size: 1.45rem;
-    color: var(--text, #5575ce);
+    color: #000000;
     font-weight: 700;
     margin-bottom: 1.2rem;
     line-height: 1.3;
