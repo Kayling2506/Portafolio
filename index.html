@@ -213,7 +213,7 @@ Mi ruta de trabajo es simple y directa: tú me dices qué dolor de cabeza operat
                 </p>
             </div>
             <div class="tech-action-group">
-                <a href="https://wa.me/7292521775?text=Hola%20vi%20tu%20perfil%2C%20y%20tengo%20un%20problema%20que%20necesito%20que%20me%20ayudes%20a%20resolver." target="_blank" rel="noopener noreferrer" class="btn-hero">¿Qué puedo hacer por ti?</a>
+                <button id="openWaBannerBtn" class="btn-coral-large">¿Qué puedo hacer por ti?</button>
             </div>
         </div>
     </div>
@@ -343,5 +343,36 @@ Mi ruta de trabajo es simple y directa: tú me dices qué dolor de cabeza operat
         </div>
     </div>
 </footer>
+
+    <!-- ==========================================
+     BANNER ALERTA: AVISO NO LLAMADAS / SOLO WHATSAPP
+     ========================================== -->
+    <div class="wa-banner-overlay" id="waBannerOverlay" aria-hidden="true">
+        <div class="wa-banner-card" role="dialog" aria-labelledby="waBannerTitle">
+            <div class="wa-banner-header">
+                <span class="wa-banner-icon"></span>
+                <h3 id="waBannerTitle">[ AVISO DE CONTACTO POR WHATSAPP ]</h3>
+                <button class="close-banner-btn" id="closeWaBannerBtn" aria-label="Cerrar aviso">&times;</button>
+            </div>
+
+            <div class="wa-banner-body">
+                <p class="wa-banner-text">
+                    Este canal está destinado <strong>únicamente para mensajes de texto por WhatsApp</strong>.
+                </p>
+                <div class="wa-banner-alert-box">
+                     <strong>NO SE RECEPCIONAN NI ATIENDEN LLAMADAS TELEFÓNICAS.</strong>
+                </div>
+                <p class="wa-banner-subtext">
+                    Por favor envía tu mensaje describiendo tu consulta o requerimiento y con gusto te atenderé a la brevedad.
+                </p>
+            </div>
+
+            <div class="wa-banner-footer">
+                <a href="https://wa.me/7292521775?text=Hola%20vi%20tu%20perfil%2C%20y%20tengo%20un%20problema%20que%20necesito%20que%20me%20ayudes%20a%20resolver." target="_blank" rel="noopener noreferrer" class="btn-wa-confirm" id="confirmWaRedirectBtn">
+                     ENTENDIDO, ENVIAR MENSAJE POR WHATSAPP
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
