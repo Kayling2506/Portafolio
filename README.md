@@ -1,26 +1,25 @@
-## 📄 Propiedad Intelectual y Derechos de Autor
+# 💻 Portafolio Técnico en Informática - Luis Enrique Ramírez
 
 <p align="center">
   <img src="https://img.shields.io/badge/Copyright-All%20Rights%20Reserved-red.svg?style=for-the-badge&logo=copyright&logoColor=white" alt="All Rights Reserved">
   <img src="https://img.shields.io/badge/Status-Production-success.svg?style=for-the-badge" alt="Production Status">
 </p>
 
-Todo el contenido de este repositorio, incluyendo el diseño de la interfaz, el código fuente, las imágenes, logotipos y textos comerciales de **Makeup Xaret**, está protegido bajo las leyes de propiedad intelectual internacionales.
+Sitio web oficial y portafolio profesional de **Luis Enrique Ramírez**, Técnico en Informática Administrativa. Especializado en soporte técnico de campo, mantenimiento de hardware, optimización de sistemas y automatización de procesos operativos.
 
 ---
 
-### ⚖️ Términos de Uso
+### ⚖️ Términos de Uso y Licencia
 
-| 🔴 Prohibido (No permitido) | 🟢 Permitido |
+| 🔴 Prohibido | 🟢 Permitido |
 | :--- | :--- |
-| **✗ Duplicación:** No se permite la copia parcial o total del diseño o código para fines comerciales de terceros. | **✓ Consulta pública:** El código está expuesto en este repositorio únicamente con fines de portafolio y revisión técnica. |
-| **✗ Robo de Identidad Visual:** Queda prohibido el uso de los logotipos, paleta de colores de marca e identidad gráfica. | **✓ Feedback:** Se agradecen las sugerencias, reporte de errores (issues) o propuestas de mejora al código. |
-| **✗ Uso de Galería:** Las fotografías de los trabajos de maquillaje son propiedad exclusiva de la autora y sus clientes. | |
+| **✗ Duplicación Comercial:** No se permite la copia total o parcial del diseño o código para fines comerciales de terceros. | **✓ Consulta Pública:** El código está expuesto en este repositorio con fines de portafolio y evaluación técnica profesional. |
+| **✗ Uso de Identidad Visual:** Queda prohibido el uso indebido de la marca, gráficos o textos personales. | **✓ Feedback:** Se agradecen las sugerencias, reporte de errores (issues) o propuestas de mejora. |
 
 ---
 
 ### 📜 Declaración Legal
 
-> **Copyright © 2026 kayling2506 / [makeupxaret.com](https://makeupxaret.com)**
+> **Copyright © 2026 Luis Enrique Ramírez**
 >
-> Todos los derechos reservados. Ninguna parte de esta publicación (incluyendo código, diseño visual y contenido multimedia) puede ser reproducida, distribuida o transmitida de ninguna forma ni por ningún medio, incluyendo fotocopias, grabaciones u otros métodos electrónicos, sin el permiso previo por escrito del titular del copyright.
+> Todos los derechos reservados. Ninguna parte de esta publicación (incluyendo código fuente, diseño visual y recursos gráficos) puede ser reproducida, distribuida o transmitida de ninguna forma sin el permiso previo por escrito del autor.
