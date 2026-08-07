@@ -527,13 +527,14 @@
         border-radius: 6px;
         transition: all 0.25s ease;
         border: 2px solid #17ff02;
+        cursor: pointer;
     }
 
     .btn-coral-large:hover {
         background-color: #000000;
-        color: #666463;
+        color: #17ff02;
         transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(4, 126, 30, 0.397);
+        box-shadow: 0 10px 25px rgba(23, 255, 2, 0.4);
     }
 
     /* ==========================================
@@ -1383,4 +1384,136 @@ i { width: 10px; height: 10px; }
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ===================================================
+   BANNER ALERTA: NO LLAMADAS / SOLO WHATSAPP
+   =================================================== */
+.wa-banner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 1rem;
+}
+
+.wa-banner-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wa-banner-card {
+    background: #0d0e12;
+    border: 2px solid #17ff02;
+    box-shadow: 0 0 35px rgba(23, 255, 2, 0.25);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 520px;
+    padding: 1.8rem;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.wa-banner-overlay.active .wa-banner-card {
+    transform: scale(1);
+}
+
+.wa-banner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(23, 255, 2, 0.25);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.wa-banner-icon {
+    font-size: 1.6rem;
+}
+
+.wa-banner-header h3 {
+    color: #17ff02;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.95rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.close-banner-btn {
+    background: transparent;
+    border: none;
+    color: #17ff02;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-banner-btn:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+}
+
+.wa-banner-text {
+    font-size: 1.05rem;
+    color: #f1f5f9;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.wa-banner-alert-box {
+    background: rgba(23, 255, 2, 0.08);
+    border: 1px dashed #17ff02;
+    color: #17ff02;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.wa-banner-subtext {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.btn-wa-confirm {
+    display: block;
+    width: 100%;
+    background: #17ff02;
+    color: #000000;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.9rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    box-shadow: 0 5px 15px rgba(23, 255, 2, 0.3);
+}
+
+.btn-wa-confirm:hover {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(23, 255, 2, 0.6);
+}
+
 
