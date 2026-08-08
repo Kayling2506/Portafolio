@@ -1,0 +1,13 @@
+# =============================================================================
+# ROBOTS.TXT - IT & ADM | Luis Enrique Ramírez
+# Sitio Oficial: https://www.portafolioluisenriqueramirez.com
+# Copyright (c) 2026 Luis Enrique Ramírez. Todos los derechos reservados.
+# =============================================================================
+
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /privacy-policy.html
+
+# Mapa del sitio oficial
+Sitemap: https://www.portafolioluisenriqueramirez.com/sitemap.xml
