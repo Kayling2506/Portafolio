@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  =============================================================================
+  SITEMAP.XML - IT & ADM | Luis Enrique Ramírez
+  Sitio Oficial: https://www.portafolioluisenriqueramirez.com
+  Copyright (c) 2026 Luis Enrique Ramírez. Todos los derechos reservados.
+  =============================================================================
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.portafolioluisenriqueramirez.com/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
