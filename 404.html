@@ -2,66 +2,111 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Seguridad y Privacidad Web -->
+    <meta name="theme-color" content="#0d0e12">
+    <meta name="description" content="Página no encontrada (Error 404) | IT & ADM - Luis Enrique Ramírez">
+    <meta name="author" content="Luis Enrique Ramirez">
+    
+    <!-- SEO Best Practice para Error 404 (Evita indexación indebida en buscadores) -->
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Seguridad y Privacidad Web (CSP Reforzado + Referrer Policy) -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
-    <title>404 | IT & ADM</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+
+    <!-- Favicon & Apple Touch Icon -->
+    <link rel="icon" href="Logo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="Logo.ico">
+
+    <!-- Fuentes de Texto con Optimización de Carga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>404: Ruta no encontrada | IT & ADM</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            background-color: #0c0c0c;
-            color: #00FF00;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d0e12;
+            color: #00FF41;
+            font-family: 'Space Mono', 'Courier New', Courier, monospace;
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            padding: 20px;
         }
 
-        .terminal-container {
-            border: 1px solid #00FF00;
-            padding: 40px;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+        main.terminal-container {
+            border: 1px solid #00FF41;
+            padding: 35px 30px;
+            width: 100%;
+            max-width: 650px;
+            background: #12141a;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
+            border-radius: 8px;
             text-align: center;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px #00FF00;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #00FF41;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
         }
 
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+        .error-desc {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin-bottom: 25px;
         }
 
         .code-snippet {
-            background: #1a1a1a;
-            padding: 15px;
+            background: #0a0b0e;
+            padding: 20px;
             text-align: left;
-            display: inline-block;
-            border-left: 4px solid #00FF00;
+            border-left: 4px solid #00FF41;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #00FF41;
+            overflow-x: auto;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .humor-note {
+            font-size: 0.88rem;
+            color: #a0a5b5;
+            margin-bottom: 25px;
+            font-style: italic;
         }
 
         .nav-link {
             display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            border: 1px solid #00FF00;
-            color: #00FF00;
+            padding: 12px 24px;
+            border: 1px solid #00FF41;
+            background: transparent;
+            color: #00FF41;
             text-decoration: none;
-            transition: all 0.3s;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
-        .nav-link:hover {
-            background-color: #00FF00;
-            color: #0c0c0c;
+        .nav-link:hover,
+        .nav-link:focus-visible {
+            background-color: #00FF41;
+            color: #0d0e12;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+            outline: none;
         }
 
         .blink {
@@ -75,19 +120,26 @@
 </head>
 <body>
 
-    <div class="terminal-container">
-        <h1>[ 404_CRITICAL_ERROR ]</h1>
-        <p>El sistema no pudo encontrar la ruta solicitada.</p>
+    <main class="terminal-container" aria-labelledby="error-heading">
+        <h1 id="error-heading">[ 404_DIAGNOSTIC_ERROR ]</h1>
+        <p class="error-desc">
+            <strong>¡Falla técnica o administrativa detectada!</strong> El sistema no pudo encontrar la ruta solicitada o alguien archivó mal este documento en el servidor.
+        </p>
         
-        <div class="code-snippet">
-            tech@portfolio:~$ cd /requested_path<br>
-            bash: cd: /requested_path: No such file or directory<br>
-            tech@portfolio:~$ <span class="blink">_</span>
+        <div class="code-snippet" aria-label="Terminal de consola simulada">
+            tech@portfolio:~$ ./diagnostico_incidencia.sh<br>
+            [INFO] Buscando en servidor de soporte técnico... [OK]<br>
+            [INFO] Verificando registros de gestión administrativa... [NOT FOUND]<br>
+            [WARN] Diagnóstico: Ruta en huelga o archivo no registrado.<br>
+            tech@portfolio:~$ <span class="blink" aria-hidden="true">█</span>
         </div>
 
-        <br>
-        <a href="index.html" class="nav-link">[ RETURN_TO_ROOT ]</a>
-    </div>
+        <p class="humor-note">
+            "Tranquilo, como buen técnico TI y gestor administrativo, mi trabajo es resolver las fallas y devolver el orden antes de que la impresora o la cafetera colapsen."
+        </p>
+
+        <a href="index.html" class="nav-link" title="Regresar a la página principal">[ REGRESAR AL INICIO / REBOOT ]</a>
+    </main>
 
 </body>
 </html>
