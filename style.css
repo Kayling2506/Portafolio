@@ -1,15 +1,28 @@
 
-        /* ==========================================
-           TABLA DE CONTENIDOS (CSS INDEX)
-           1. Variables y Configuración Inicial
-           2. Estilos del Hero (Split-Screen)
-           3. Barra de Navegación (Navbar)
-           4. Sección Sobre Mí (Logs / Trayectoria)
-           5. Banner de Tecnología Aplicada (Labs)
-           6. Tarjetas de Servicios (Archive)
-           7. Pie de Página Retro (Arcade Footer)
-           8. Componentes Flotantes (Toast & Modal WhatsApp)
-           ========================================== */
+/*
+  =============================================================================
+  PORTAFOLIO OFICIAL - LUIS ENRIQUE RAMÍREZ (IT & ADM)
+  Sistema de Diseño, Tokens Visuales y Estilos Responsive
+  
+  Copyright (c) 2026 Luis Enrique Ramírez. Todos los derechos reservados.
+  
+  [ AVISO DE DERECHOS DE AUTOR Y PROPIEDAD INTELECTUAL ]
+  El diseño de interfaz, paleta de colores, animaciones, componentes retro
+  y maquetación responsive son propiedad intelectual exclusiva de Luis Enrique Ramírez.
+  Prohibido el plagio o uso no autorizado de estos estilos visuales.
+  
+  =============================================================================
+  TABLA DE CONTENIDOS (CSS INDEX)
+  1. Variables y Configuración Inicial
+  2. Estilos del Hero (Split-Screen)
+  3. Barra de Navegación (Navbar)
+  4. Sección Sobre Mí (Logs / Trayectoria)
+  5. Banner de Tecnología Aplicada (Labs)
+  6. Tarjetas de Servicios (Archive)
+  7. Pie de Página Retro (Arcade Footer)
+  8. Componentes Flotantes (Toast & Modal WhatsApp)
+  =============================================================================
+*/
 
         :root {
             --color-bg-light: #f5f9ff;
