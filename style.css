@@ -1438,18 +1438,20 @@ i { width: 10px; height: 10px; }
 }
 
 .wa-banner-card {
-    background: #0d0e12;
+    background: #0b0c10;
     border: 2px solid #17ff02;
-    box-shadow: 0 0 35px rgba(23, 255, 2, 0.25);
-    border-radius: 12px;
+    box-shadow: 0 0 35px rgba(23, 255, 2, 0.3), inset 0 0 15px rgba(23, 255, 2, 0.05);
+    border-radius: 10px;
     width: 100%;
-    max-width: 520px;
-    padding: 1.8rem;
+    max-width: 500px;
+    padding: 1.5rem;
     color: #ffffff;
     font-family: 'Plus Jakarta Sans', sans-serif;
     transform: scale(0.92);
     transition: transform 0.3s ease;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .wa-banner-overlay.active .wa-banner-card {
@@ -1465,16 +1467,13 @@ i { width: 10px; height: 10px; }
     margin-bottom: 1.2rem;
 }
 
-.wa-banner-icon {
-    font-size: 1.6rem;
-}
-
 .wa-banner-header h3 {
     color: #17ff02;
     font-family: 'Space Mono', monospace;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin: 0;
     font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .close-banner-btn {
@@ -1492,24 +1491,60 @@ i { width: 10px; height: 10px; }
     color: #ffffff;
 }
 
-.wa-banner-text {
-    font-size: 1.05rem;
-    color: #f1f5f9;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+.wa-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(23, 255, 2, 0.1);
+    border: 1px solid rgba(23, 255, 2, 0.4);
+    color: #17ff02;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.04em;
 }
 
-.wa-banner-alert-box {
-    background: rgba(23, 255, 2, 0.08);
-    border: 1px dashed #17ff02;
-    color: #17ff02;
-    padding: 0.8rem 1rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
+.wa-status-dot {
+    width: 8px;
+    height: 8px;
+    background: #17ff02;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #17ff02;
+    animation: blink 1.2s infinite ease-in-out;
+}
+
+.wa-banner-text {
+    font-size: 1.02rem;
+    color: #f1f5f9;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.wa-alien-zone {
+    text-align: center;
+    background: rgba(255, 59, 59, 0.05);
+    border: 1px dashed rgba(255, 59, 59, 0.4);
+    padding: 1.2rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+
+.red-alien .p {
+    background: #ff3b3b;
+    box-shadow: 0 0 6px rgba(255, 59, 59, 0.8);
+}
+
+.wa-red-warning {
+    color: #ff3b3b;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.4;
+    font-size: 0.88rem;
+    margin-top: 0.8rem;
+    letter-spacing: 0.03em;
+    text-shadow: 0 0 10px rgba(255, 59, 59, 0.4);
 }
 
 .wa-banner-subtext {
@@ -1526,19 +1561,22 @@ i { width: 10px; height: 10px; }
     color: #000000;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     padding: 0.9rem 1rem;
     border-radius: 6px;
     text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
-    box-shadow: 0 5px 15px rgba(23, 255, 2, 0.3);
+    transition: all 0.25s ease;
+    box-shadow: 0 0 20px rgba(23, 255, 2, 0.4);
+    letter-spacing: 0.03em;
 }
 
-.btn-wa-confirm:hover {
+.btn-wa-confirm:hover,
+.btn-wa-confirm:focus-visible {
     background: #ffffff;
     color: #000000;
     transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(23, 255, 2, 0.6);
+    box-shadow: 0 0 30px rgba(23, 255, 2, 0.7);
+    outline: none;
 }
 
 
