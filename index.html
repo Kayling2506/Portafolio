@@ -371,31 +371,53 @@
 </footer>
 
     <!-- ==========================================
-     BANNER ALERTA: AVISO NO LLAMADAS / SOLO WHATSAPP
+     MODAL / VENTANA EMERGENTE RETRO: CANAL WHATSAPP
      ========================================== -->
     <div class="wa-banner-overlay" id="waBannerOverlay" aria-hidden="true">
         <div class="wa-banner-card" role="dialog" aria-labelledby="waBannerTitle">
             <div class="wa-banner-header">
-                <span class="wa-banner-icon"></span>
-                <h3 id="waBannerTitle">[ AVISO DE CONTACTO POR WHATSAPP ]</h3>
+                <div class="terminal-actions">
+                    <span class="term-dot red"></span>
+                    <span class="term-dot yellow"></span>
+                    <span class="term-dot green"></span>
+                </div>
+                <h3 id="waBannerTitle">[ UPLINK_DIRECTO: WHATSAPP ]</h3>
                 <button class="close-banner-btn" id="closeWaBannerBtn" aria-label="Cerrar aviso">&times;</button>
             </div>
 
             <div class="wa-banner-body">
-                <p class="wa-banner-text">
-                    Este canal está destinado <strong>únicamente para mensajes de texto por WhatsApp</strong>.
-                </p>
-                <div class="wa-banner-alert-box">
-                     <strong>NO SE RECEPCIONAN NI ATIENDEN LLAMADAS TELEFÓNICAS.</strong>
+                <div class="wa-status-badge">
+                    <span class="wa-status-dot"></span> CANAL ACTIVO • SOLO MENSAJES
                 </div>
+                
+                <p class="wa-banner-text">
+                    ¿Tienes un problema técnico, necesitas organizar tus datos o consultar una página web? Hablemos directo por WhatsApp.
+                </p>
+
+                <!-- Zona de Alerta Retro con Alien en Rojo -->
+                <div class="wa-alien-zone">
+                    <div class="pixel-alien red-alien">
+                        <div class="row"><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+                        <div class="row"><i></i><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+                        <div class="row"><i></i><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i><i></i></div>
+                        <div class="row"><i></i><div class="p"></div><div class="p"></div><i></i><div class="p"></div><div class="p"></div><div class="p"></div><i></i><div class="p"></div><div class="p"></div><i></i></div>
+                        <div class="row"><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i></div>
+                        <div class="row"><i></i><div class="p"></div><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i><div class="p"></div><i></i><i></i></div>
+                        <div class="row"><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+                    </div>
+                    <div class="wa-red-warning">
+                        [ NO SE RECEPCIONAN LLAMADAS TELEFÓNICAS ]
+                    </div>
+                </div>
+
                 <p class="wa-banner-subtext">
-                    Por favor envía tu mensaje describiendo tu consulta o requerimiento y con gusto te atenderé a la brevedad.
+                    Escribe tu consulta por mensaje de texto y te atenderé a la brevedad.
                 </p>
             </div>
 
             <div class="wa-banner-footer">
                 <a href="https://wa.me/7292521775?text=Hola%20vi%20tu%20perfil%2C%20y%20tengo%20un%20problema%20que%20necesito%20que%20me%20ayudes%20a%20resolver." target="_blank" rel="noopener noreferrer" class="btn-wa-confirm" id="confirmWaRedirectBtn">
-                     ENVIAR MENSAJE POR WHATSAPP
+                    [  INICIAR CHAT EN WHATSAPP ]
                 </a>
             </div>
         </div>
