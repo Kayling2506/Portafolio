@@ -1,6 +1,18 @@
 /**
- * Portafolio Técnico - Script Principal Refactorizado
- * Manejo de navegación interactiva, ScrollSpy, copiado rápido y accesibilidad responsive.
+ * =============================================================================
+ * PORTAFOLIO OFICIAL - LUIS ENRIQUE RAMÍREZ (IT & ADM)
+ * Script Principal de Lógica, Interactividad, Navegación y Seguridad
+ * 
+ * Copyright (c) 2026 Luis Enrique Ramírez. Todos los derechos reservados.
+ * 
+ * [ AVISO DE PROTECCIÓN DE CÓDIGO Y PROPIEDAD INTELECTUAL ]
+ * Queda estrictamente prohibida la copia, reproducción, distribución o uso
+ * no autorizado de estos módulos de script sin la autorización previa por
+ * escrito del titular de la obra.
+ * 
+ * Este módulo controla la navegación interactiva, observador ScrollSpy,
+ * interfaz de portapapeles, modal de WhatsApp y seguridad de activos.
+ * =============================================================================
  */
 
 // Estado global para controlar la navegación sin repintados innecesarios
