@@ -1,3 +1,24 @@
+<!--
+  =============================================================================
+  PORTAFOLIO OFICIAL - IT & ADM
+  Titular & Autor: Luis Enrique Ramírez
+  Año: 2026 | Todos los Derechos Reservados ©
+  
+  [ AVISO DE PROPIEDAD INTELECTUAL Y PROTECCIÓN DE CÓDIGO ]
+  El diseño visual, código fuente (HTML, CSS, JS), marca "IT & ADM", 
+  estructura de componentes y contenidos presentados en este proyecto 
+  son propiedad intelectual exclusiva de Luis Enrique Ramírez.
+  
+  Queda estrictamente prohibida la reproducción parcial o total, distribución, 
+  modificación o uso no autorizado de este código con fines comerciales o de 
+  plagio sin consentimiento previo por escrito del autor.
+  
+  [ MEDIDAS DE SEGURIDAD Y PRIVACIDAD ]
+  - Content Security Policy (CSP) reforzado contra ataques XSS y Clickjacking.
+  - Protección de referencias (Strict-Origin-When-Cross-Origin).
+  - Cumplimiento de estándares de privacidad (Sin rastreadores ni cookies).
+  =============================================================================
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +32,7 @@
     
     <!-- Seguridad y Privacidad Web -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
 
     <!-- Open Graph / Meta etiquetas para Redes Sociales (WhatsApp, LinkedIn, Facebook) -->
     <meta property="og:type" content="website">
@@ -103,8 +124,7 @@
             <!-- Tarjeta de Perfil Superpuesta -->
             <div class="hero-profile-container">
                 <div class="profile-frame">
-                    <!-- Recuerda apuntar esta ruta a la ubicación de tu imagen -->
-                    <img src="img/Person_Pixel Art.png" alt="Luis Enrique Ramirez" class="profile-img">
+                    <img src="img/Person_Pixel Art.png" alt="Luis Enrique Ramirez - Ilustración Pixel Art" class="profile-img" decoding="async">
                 </div>
             </div>
         </div>
@@ -171,7 +191,7 @@
                         
                     </div>
                     
-                    <p class="term-line dynamic-cursor"><span class="term-prompt">tech@portfolio:~$</span> <span class="cursor">█</span></p>
+                    <p class="term-line dynamic-cursor"><span class="term-prompt">tech@portfolio:~$</span> <span class="cursor" aria-hidden="true">█</span></p>
                 </div>
             </div>
             <div class="about-deco-frame"></div>
@@ -299,7 +319,7 @@
 </section>
 <footer class="arcade-footer" id="Contacto">
     <!-- Efecto CRT Scanlines (Creatividad visual) -->
-    <div class="scanlines"></div>
+    <div class="scanlines" aria-hidden="true"></div>
 
     <div class="footer-wrapper">
         <!-- El Alien de 8 bits -->
