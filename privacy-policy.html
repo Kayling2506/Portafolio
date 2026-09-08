@@ -82,12 +82,18 @@
         }
 
         h1 {
-            font-size: 1.8rem;
+            /* font-size: 1.8rem; <-- Reemplazamos esta vieja escuela */
+            font-size: clamp(1.2rem, 5vw, 1.8rem); /* Escalado dinámico moderno */
             margin-bottom: 25px;
             color: #00FF41;
             text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            
+            /* El escudo anti-descuadres para palabras largas */
+            overflow-wrap: break-word; 
+            word-wrap: break-word;
+            hyphens: auto; 
         }
 
         p {
@@ -175,7 +181,7 @@
             <img src="img/greeting.gif" alt="Animación de bienvenida estilo pixel art" decoding="async">
         </div>
         
-        <h1 id="privacy-heading">[ SNOOPING_DETECTED ]</h1>
+        <h1 id="privacy-heading">[SNOOPING_DETECTED]</h1>
         
         <p>Vaya, así que te dio curiosidad husmear por aquí, ¿eh? Tranquilo, no voy a activar el protocolo de bloqueo... todavía.</p>
         
