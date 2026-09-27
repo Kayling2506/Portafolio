@@ -27,7 +27,7 @@
     
     <!-- Seguridad y Privacidad Web -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' ws:; object-src 'none'; base-uri 'self'; form-action 'self';">
 
     <!-- Open Graph / Meta etiquetas para Redes Sociales (WhatsApp, LinkedIn, Facebook) -->
     <meta property="og:type" content="website">
@@ -423,5 +423,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Botón Flotante: Volver al Inicio -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver al inicio">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
 </body>
 </html>
