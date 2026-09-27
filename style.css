@@ -1388,7 +1388,7 @@ i { width: 10px; height: 10px; }
 /* Toast Notification (Estilo Terminal Retro) */
 .toast-notification {
     position: fixed;
-    bottom: 2rem;
+    bottom: 5.5rem;
     right: 2rem;
     background: #050505;
     color: #00FF41;
@@ -1578,6 +1578,82 @@ i { width: 10px; height: 10px; }
     box-shadow: 0 0 30px rgba(23, 255, 2, 0.7);
     outline: none;
 }
+
+/* ===================================================
+   BOTÓN FLOTANTE: VOLVER ARRIBA (SCROLL TO TOP)
+   =================================================== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(13, 14, 18, 0.88);
+    color: var(--hero-lime, #17ff02);
+    border: 1.5px solid rgba(23, 255, 2, 0.45);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 15px rgba(23, 255, 2, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    background: var(--hero-lime, #17ff02);
+    color: #000000;
+    border-color: var(--hero-lime, #17ff02);
+    box-shadow: 0 0 25px rgba(23, 255, 2, 0.65);
+    transform: translateY(-3px);
+}
+
+.scroll-top-btn:active {
+    transform: translateY(0) scale(0.92);
+}
+
+.scroll-top-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.scroll-top-btn svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.25s ease;
+}
+
+.scroll-top-btn:hover svg {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        display: none !important;
+    }
+
+    .toast-notification {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
 
 
 
