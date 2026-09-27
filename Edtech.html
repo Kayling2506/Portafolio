@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0e12">
+    <meta name="description" content="Portafolio de Luis Enrique Ramírez - Técnico Informático y Gestor Administrativo. Soporte técnico integral, gestión de procesos y desarrollo de páginas web básicas.">
+    <meta name="keywords" content="Técnico en Informática, Soporte Informático, Gestión Administrativa, Páginas Web Básicas, Portafolios, Luis Enrique Ramírez">
+    <meta name="author" content="Luis Enrique Ramirez">
+    
+    <!-- Seguridad y Privacidad Web -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+
+    <!-- Open Graph / Meta etiquetas para Redes Sociales (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IT & ADM | Luis Enrique Ramírez">
+    <meta property="og:title" content="Portafolio Técnico en Informática & Gestión Administrativa | Luis Enrique Ramírez">
+    <meta property="og:description" content="Soporte técnico integral, instalación de CCTV y gestión administrativa.">
+    <meta property="og:image" content="img/Person_Pixel Art.png">
+    <meta property="og:locale" content="es_MX">
+    
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portafolio Técnico en Informática & Gestión Administrativa | Luis Enrique Ramírez">
+    <meta name="twitter:description" content="Soporte técnico integral, instalación de CCTV y gestión administrativa.">
+    <meta name="twitter:image" content="img/Person_Pixel Art.png">
+  <title>¿Qué es EdTech?</title>
+  
+  <!-- Fuente Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Logo.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="Logo.ico">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-color: #ffffff;
+      --text-main: #111111;
+      --text-muted: #4b5563;
+      --accent-color: #00e65c;
+      --card-bg: #111111;
+      --card-text: #ffffff;
+      --border-color: #e5e7eb;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Layout Principal de 2 Columnas */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: 100vh;
+    }
+
+    @media (min-width: 900px) {
+      .layout-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Columna Izquierda: Contenido + Botón Volver */
+    .left-col {
+      padding: 3rem 2rem 4rem 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      justify-content: center;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Botón Regresar */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.2s ease, transform 0.2s ease;
+      align-self: flex-start;
+    }
+
+    .back-btn:hover {
+      color: var(--text-main);
+      transform: translateX(-8px);
+    }
+
+    .back-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 4.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .tag {
+      color: var(--accent-color);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Título en color Negro */
+    .title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #000000;
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .title {
+        font-size: 2.75rem;
+      }
+    }
+
+    .description {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Recuadro de Leyenda Destacada */
+    .highlight-box {
+      border-left: 3px solid var(--accent-color);
+      padding-left: 1.25rem;
+      margin: 0.5rem 0;
+    }
+
+    .highlight-text {
+      color: var(--text-main);
+      font-size: 0.98rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    /* Preguntas Frecuentes */
+    .faq-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .faq-item {
+      background-color: var(--card-bg);
+      color: var(--card-text);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item summary {
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      color: var(--accent-color);
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-left: 1rem;
+    }
+
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      margin-top: 0.85rem;
+      color: #d1d5db;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      border-top: 1px solid #222222;
+      padding-top: 0.85rem;
+    }
+
+    /* Columna Derecha: Imagen Ilustrativa que ocupa todo el alto */
+    .right-col {
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      min-height: 400px;
+    }
+
+    .right-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .description {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify; /* <-- Agrega esta línea */
+}
+
+.highlight-text {
+  color: var(--text-main);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: justify; /* <-- Agrega esta línea si también quieres justificar la leyenda */
+}
+
+@media (min-width: 900px) {
+  .right-col {
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Mantiene la altura fija de la pantalla */
+    overflow: hidden;
+  }
+
+  .right-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="layout-grid">
+    
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="left-col">
+      
+      <!-- Botón de Regresar -->
+      <a href="index.html" class="back-btn">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Regresar al inicio
+      </a>
+      <section>
+        <div>
+        <span class="tag">Especialización</span>
+        <h1 class="title">¿Qué es EdTech?</h1><br>
+      </div>
+
+      <p class="description">
+        EdTech (contracción de Educational Technology o Tecnología Educativa) es la unión de herramientas tecnológicas con el ámbito de la enseñanza para acompañar, facilitar y transformar el proceso de aprendizaje.
+
+En esencia, es cualquier recurso informático o digital. Desde un software de gestión de clases y una plataforma virtual, hasta la red de internet o las computadoras de un aula; diseñado para que docentes, estudiantes y administradores puedan conectarse, compartir conocimiento y realizar sus actividades diarias de manera fluida y organizada.
+      </p><br>
+
+      <div class="highlight-box">
+        <p class="highlight-text">
+          Mi objetivo es asegurar que los docentes impartan clase sin interrupciones, los alumnos aprendan sin fallas de conectividad y la administración mantenga el control total de sus datos y procesos.
+        </p>
+      </div>
+      </section>
+
+      <section>
+            <!-- Preguntas Frecuentes -->
+        <div class="faq-wrapper">
+            <details class="faq-item">
+            <summary>¿Qué diferencia hay entre soporte TI tradicional y EdTech?</summary>
+            <div class="faq-answer">
+                El soporte tradicional se enfoca únicamente en reparar equipos dañados. El enfoque EdTech alinea el mantenimiento de hardware, la administración de plataformas de aprendizaje (LMS) y las bases de datos para que la tecnología sirva directamente al modelo educativo.
+            </div>
+            </details>
+
+            <details class="faq-item">
+            <summary>¿Realizas mantenimiento preventivo o solo correctivo?</summary>
+            <div class="faq-answer">
+                Ambos. Priorizo el mantenimiento preventivo para evitar caídas de red o fallas en laboratorios durante clases, pero también atiendo emergencias técnicas y diagnóstico correctivo.
+            </div>
+            </details>
+
+            <details class="faq-item">
+            <summary>¿Trabajas con plataformas educativas específicas?</summary>
+            <div class="faq-answer">
+                Tengo experiencia administrando sistemas de gestión académica, entornos Moodle, WordPress educativo y bases de datos SQL. Me adapto a la plataforma que la institución ya tenga implementada.
+            </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Cómo funciona el soporte técnico integrado en una escuela?</summary>
+                <div class="faq-answer">
+                Unifica el mantenimiento preventivo y correctivo de laboratorios con la gestión activa de servidores y bases de datos SQL. Esto permite prevenir caídas en periodos críticos (como evaluaciones) y resolver incidencias de conectividad de forma ágil.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Qué diferencia hay entre administrar una plataforma académica y solo darle mantenimiento técnico?</summary>
+                <div class="faq-answer">
+                La administración implica estructurar cursos, gestionar permisos, automatizar reportes de avance y mantener la base de datos optimizada; mientras que el mantenimiento técnico asegura la disponibilidad del servidor y la velocidad del sitio. Ambas capas son indispensables para el éxito de la plataforma.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Cómo contribuye este rol al proyecto pedagógico de la institución?</summary>
+                <div class="faq-answer">
+                La tecnología por sí sola no transforma la educación; es un facilitador. Mi trabajo asegura que las herramientas digitales sean transparentes e intuitivas, permitiendo que los docentes se concentren 100% en enseñar y los alumnos en aprender, sin que la brecha técnica sea un obstáculo.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo manejas la comunicación y la empatía con usuarios no técnicos?</summary>
+                <div class="faq-answer">
+                Entiendo que una falla técnica genera frustración. Escucho de forma activa a los docentes, personal administrativo y alumnos, traduciendo conceptos informáticos a un lenguaje claro y brindando soluciones pacientes que generen confianza y tranquilidad en el uso diario.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Qué valor aporta una visión integral entre administración y tecnología?</summary>
+                <div class="faq-answer">
+                Al contar con formación en informática administrativa, no solo veo el problema técnico inmediato, sino cómo impacta a la organización. Esto me permite proponer mejoras en los flujos de trabajo escolar, optimizar tiempos de gestión y proteger los recursos de la institución.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo fomentas una cultura digital segura y responsable en la comunidad escolar?</summary>
+                <div class="faq-answer">
+                Más allá de instalar filtros o bloqueos, promuevo el uso ético y consciente de la red y los dispositivos, compartiendo buenas prácticas sobre la protección de datos personales, contraseñas seguras y el cuidado del equipo tecnológico.
+                </div>
+            </details>
+        </div>
+        </div>
+      </section>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="right-col">
+      <img src="img/EdTech_Icono.jpg" alt="Ilustración EdTech" />
+    </div>
+
+  </div>
+
+</body>
+</html>
