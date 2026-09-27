@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initClipboardMailto();
     initWaBanner();
     initImageProtection();
+    initScrollToTop();
 });
 
 /**
@@ -206,3 +207,38 @@ function initImageProtection() {
         img.setAttribute('draggable', 'false');
     });
 }
+
+/**
+ * 6. Botón Volver Arriba (Scroll to Top) con desplazamiento suave
+ */
+function initScrollToTop() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (!scrollTopBtn) return;
+
+    let isScrolling = false;
+
+    const handleScroll = () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
