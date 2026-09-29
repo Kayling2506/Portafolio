@@ -20,17 +20,22 @@ let toastTimeout = null;
 let currentActiveId = undefined;
 
 /**
- * Inicialización principal al cargar el DOM
+ * Inicialización principal al cargar el árbol DOM
+ * Configura los observadores, enlaces de navegación, portapapeles y ventanas modales.
  */
 document.addEventListener('DOMContentLoaded', () => {
     const navAnchors = document.querySelectorAll('.nav-links a');
 
-    // Pre-cachear atributos de destino para no consultar el DOM en cada scroll
-    navAnchors.forEach(anchor => {
-        anchor.dataset.targetId = anchor.getAttribute('href')?.replace('#', '') || '';
+    // Pre-cachear atributos de destino exclusivamente para enlaces internos (anclas #)
+    navAnchors.forEach((anchor) => {
+        const href = anchor.getAttribute('href') || '';
+        anchor.dataset.targetId = href.startsWith('#') ? href.replace('#', '') : '';
     });
 
-    // Función optimizada para actualizar enlace activo (solo muta el DOM si cambia la sección)
+    /**
+     * Actualiza la clase 'active-link' en la barra de navegación sin repintados innecesarios.
+     * @param {string|null} targetId - ID de la sección activa actual o null si está en portada.
+     */
     const setActiveNav = (targetId) => {
         const activeTarget = (!targetId || targetId === 'home') ? null : targetId;
         if (currentActiveId === activeTarget) return;
@@ -50,7 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * 1. Manejo del menú móvil (Navegación responsive)
+ * Controla la apertura, cierre y accesibilidad (ARIA) del menú de navegación en dispositivos móviles.
+ * @param {NodeListOf<HTMLAnchorElement>} navAnchors - Colección de enlaces del menú de navegación.
+ * @param {Function} setActiveNav - Función para actualizar visualmente el enlace activo.
  */
 function initMobileMenu(navAnchors, setActiveNav) {
     const menuBtn = document.getElementById('menuBtn');
@@ -63,20 +70,25 @@ function initMobileMenu(navAnchors, setActiveNav) {
         menuBtn.setAttribute('aria-expanded', String(isOpen));
     });
 
-    // Cerrar el menú y actualizar enlace al hacer clic
+    // Cerrar el menú y actualizar estado visual al interactuar con cualquier enlace
     navAnchors.forEach((link) => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             menuBtn.setAttribute('aria-expanded', 'false');
 
-            const targetId = link.dataset.targetId || link.getAttribute('href')?.replace('#', '');
-            setActiveNav(targetId);
+            const targetId = link.dataset.targetId;
+            if (targetId) {
+                setActiveNav(targetId);
+            }
         });
     });
 }
 
 /**
- * 2. ScrollSpy adaptativo mediante IntersectionObserver
+ * Configura la detección automática de sección activa mediante IntersectionObserver.
+ * Sincroniza dinámicamente el estado visual del menú sin cálculos pesados en cada evento de scroll.
+ * @param {NodeListOf<HTMLAnchorElement>} navAnchors - Colección de enlaces del menú.
+ * @param {Function} setActiveNav - Callback para activar el enlace correspondiente a la sección.
  */
 function initScrollSpy(navAnchors, setActiveNav) {
     const sections = document.querySelectorAll('header[id], section[id], footer[id]');
@@ -99,7 +111,7 @@ function initScrollSpy(navAnchors, setActiveNav) {
 
     sections.forEach((section) => observer.observe(section));
 
-    // Garantizar apagar luces cerca de la portada
+    // Apaga el resaltado activo al situarse muy cerca del inicio de la página
     window.addEventListener('scroll', () => {
         if (window.scrollY < 200) {
             setActiveNav(null);
@@ -108,7 +120,8 @@ function initScrollSpy(navAnchors, setActiveNav) {
 }
 
 /**
- * 3. Copiar correo al portapapeles con Toast retro (soporta múltiples enlaces mailto)
+ * Intercepta los enlaces mailto para copiar la dirección al portapapeles con fallback de navegación.
+ * Emite una notificación flotante (toast) retro confirmando la acción.
  */
 function initClipboardMailto() {
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
@@ -131,7 +144,9 @@ function initClipboardMailto() {
 }
 
 /**
- * Muestra notificación flotante retro con control de timeout reiniciable
+ * Genera y despliega una notificación flotante estilo consola retro.
+ * Si ya existe una notificación visible, reinicia el temporizador para evitar solapamientos.
+ * @param {string} message - Texto informativo que se mostrará en el toast.
  */
 function showToast(message) {
     let toast = document.querySelector('.toast-notification');
@@ -141,7 +156,6 @@ function showToast(message) {
         document.body.appendChild(toast);
     }
 
-    // Reiniciar temporizador anterior si existe para evitar ocultamiento prematuro
     if (toastTimeout) {
         clearTimeout(toastTimeout);
     }
@@ -156,7 +170,8 @@ function showToast(message) {
 }
 
 /**
- * 4. Modal/Banner Alerta: Aviso No Llamadas / Solo WhatsApp
+ * Gestiona el modal retro de aviso de WhatsApp (solo mensajes de texto, sin llamadas).
+ * Incluye cierre mediante botón, overlay y tecla Escape (accesibilidad por teclado).
  */
 function initWaBanner() {
     const openWaBannerBtn = document.getElementById('openWaBannerBtn');
@@ -200,7 +215,7 @@ function initWaBanner() {
 }
 
 /**
- * 5. Prevenir arrastre accidental de imágenes
+ * Desactiva el arrastre nativo de imágenes para salvaguardar la estética retro y evitar glitches visuales.
  */
 function initImageProtection() {
     document.querySelectorAll('img').forEach((img) => {
@@ -209,7 +224,8 @@ function initImageProtection() {
 }
 
 /**
- * 6. Botón Volver Arriba (Scroll to Top) con desplazamiento suave
+ * Controla la visibilidad y desplazamiento suave del botón flotante para volver arriba.
+ * Emplea requestAnimationFrame para asegurar 60fps sin saturar el hilo principal.
  */
 function initScrollToTop() {
     const scrollTopBtn = document.getElementById('scrollTopBtn');
