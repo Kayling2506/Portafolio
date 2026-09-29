@@ -651,7 +651,7 @@
 
 /* Zona inferior */
 .services-bottom-area {
-    background-color: var(--bg, #d3dff1);
+    background-color: var(--bg, #ffffff);
     padding: 0 2rem 7rem 2rem;
     display: flex;
     justify-content: center;
@@ -822,7 +822,7 @@
 
 .about-section {
     width: 100%;
-    background-color: var(--bg, #e1e1e2); /* Se adapta suavemente al fondo claro de tu rejilla[cite: 1] */
+    background-color: var(--bg, #fafafd); /* Se adapta suavemente al fondo claro de tu rejilla[cite: 1] */
     padding: 8rem 2rem;
     display: flex;
     justify-content: center;
