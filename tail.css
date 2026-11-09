@@ -496,10 +496,12 @@ body {
 
 .escalera-subtitulo {
     color: var(--color-texto-secundario);
-    font-size: 1.08rem;
-    max-width: 720px;
+    font-size: 1.1rem;
+    width: 100%;        
+    max-width: none;     
     margin-top: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: 0.015em;
     text-shadow: none;
 }
 
