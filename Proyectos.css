@@ -5,8 +5,8 @@
 :root {
   --card-bg: #151b23;          /* Fondo de las tarjetas */
   --card-border: #212830;      /* Borde de las tarjetas */
-  --accent-green: #00ff66;     /* Verde terminal */
-  --accent-cyan: #00f0ff;      /* Cian */
+  --accent-green: #17ff02;     /* Verde terminal */
+  --accent-cyan: #17ff02;      /* Cian */
   --text-main: #f0f6fc;        /* Texto dentro de las tarjetas */
   --text-muted: #8b949e;       /* Subtexto dentro de las tarjetas */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -71,10 +71,10 @@
 }
 
 .cert-item:hover {
-  border-color: #00ff66; /* Verde neón puro para el borde */
+  border-color: #17ff02; /* Verde neón puro para el borde */
   transform: translateY(-3px);
   /* Sombra doble: un resplandor neón intenso + sombra profunda */
-  box-shadow: 0 0 15px rgba(0, 255, 102, 0.4), 
+  box-shadow: 0 0 15px rgba(52, 255, 1, 0.945), 
               0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
