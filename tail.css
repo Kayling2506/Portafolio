@@ -22,14 +22,14 @@
 */
 
 :root {
-    --color-neon-green: #00e640;
+    --color-neon-green: #17ff02;
     --fuente-code: 'Consolas', 'Courier New', monospace;
     --color-fondo: #ffffff;
     --color-superficie: #f8faf9;
     --color-texto: #1f2937;
     --color-texto-secundario: #5f6c7b;
-    --color-acento: #00B368;
-    --color-acento-hover: #009456;
+    --color-acento: #17ff02;
+    --color-acento-hover: #9eff02;
     --color-acento-glow: rgba(0, 179, 104, 0.15);
     --color-acento-suave: #e8f8f0;
     --color-borde: #e5e7eb;
