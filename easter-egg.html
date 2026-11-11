@@ -1,0 +1,202 @@
+<!--
+  =============================================================================
+  AVISO DE PRIVACIDAD Y ACCESO - IT & ADM
+  Titular & Autor: Luis Enrique Ramírez
+  Año: 2026 | Todos los Derechos Reservados ©
+  
+  [ PROPIEDAD INTELECTUAL Y PROTOCOLO DE PRIVACIDAD ]
+  Este documento y su interfaz retro están protegidos por derechos de autor.
+  Garantiza el cumplimiento de normas de privacidad sin recopilación de datos.
+  =============================================================================
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    <meta name="description" content="Aviso de privacidad y acceso al portafolio de Luis Enrique Ramírez - Técnico Informático y Gestor Administrativo.">
+    <meta name="author" content="Luis Enrique Ramirez">
+
+    <!-- SEO Best Practice para Páginas de Aviso/Privacidad -->
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Seguridad y Privacidad Web (CSP Reforzado + Referrer Policy) -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+    
+    <!-- Favicon & Touch Icon -->
+    <link rel="icon" href="Logo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="Logo.ico">
+
+    <!-- Fuentes de Texto con Optimización de Carga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Acceso & Privacidad | IT & ADM</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #050505;
+            color: #00FF41;
+            font-family: 'Space Mono', 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Efecto CRT Scanlines */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,255,65,0.06) 50%, rgba(0,0,0,0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        main.terminal-container {
+            border: 2px solid #00FF41;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 40px;
+            width: 100%;
+            max-width: 680px;
+            box-shadow: 0 0 25px rgba(0, 255, 65, 0.25);
+            text-align: center;
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            /* font-size: 1.8rem; <-- Reemplazamos esta vieja escuela */
+            font-size: clamp(1.2rem, 5vw, 1.8rem); /* Escalado dinámico moderno */
+            margin-bottom: 25px;
+            color: #00FF41;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            
+            /* El escudo anti-descuadres para palabras largas */
+            overflow-wrap: break-word; 
+            word-wrap: break-word;
+            hyphens: auto; 
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: left;
+            color: #e0e0e0;
+        }
+
+        .highlight {
+            color: #00FF41;
+            font-weight: bold;
+        }
+
+        .gif-container {
+            margin: 15px 0 25px 0;
+        }
+
+        .gif-container img {
+            border: 2px solid #00FF41;
+            max-width: 180px;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+
+        /* Noticia Oficial de Privacidad */
+        .privacy-official-note {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px dashed rgba(0, 255, 65, 0.4);
+            color: #00FF41;
+            padding: 14px 18px;
+            font-size: 0.88rem;
+            border-radius: 6px;
+            margin: 25px 0;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .term-prompt {
+            color: #00FF41;
+            font-weight: bold;
+        }
+
+        .blink {
+            animation: blink 1s steps(2, start) infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 28px;
+            border: 2px solid #00FF41;
+            color: #00FF41;
+            background: transparent;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            border-radius: 4px;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus-visible {
+            background-color: #00FF41;
+            color: #050505;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+            transform: translateY(-2px);
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Efecto CRT Scanlines -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <main class="terminal-container" aria-labelledby="privacy-heading">
+        <div class="gif-container">
+            <img src="img/greeting.gif" alt="Animación de bienvenida estilo pixel art" decoding="async">
+        </div>
+        
+        <h1 id="privacy-heading">[SNOOPING_DETECTED]</h1>
+        
+        <p style="text-align: justify;">Vaya, lograste colarte hasta aquí sin activar ningún firewall. Descuida, baja las manos: no voy a soltarte un script de bloqueo… al menos no mientras mantengas la curiosidad encendida.</p>
+        
+        <p style="text-align: justify;">Si te soy honesto, sé perfectamente lo caótico y rápido que se mueve internet hoy en día, así que valoro un montón que hayas decidido pausar un momento tu rutina para curiosear por este rincón. El tiempo es el recurso más valioso que tenemos, así que el hecho de que estés aquí ya suma bastantes puntos de experiencia para ambos.</p>
+        
+        <p style="text-align: justify;">Por si nos estamos conociendo apenas, soy <span class="highlight">estudiante de Informática Administrativa y técnico informático</span>. Llevo 2 casi 3 años en el frente de batalla del soporte técnico, la gestión administrativa y la optimización operativa, arreglando lo que se rompe, organizando datos y resolviendo problemas para que todo funcione a la primera. Este sitio es básicamente el resumen de esos 2 años de aprendizaje y trabajo en field.</p>
+        
+        <p style="text-align: justify;">Este espacio no es un currículum acartonado ni un informe corporativo; es más bien el diario de ruta de ese viaje. Aquí vas a encontrar lo que he aprendido a base de pruebas, errores, cables desenredados y soluciones prácticas que de verdad funcionan.</p>
+
+        <p class="privacy-official-note">Vivir en un mundo donde la tecnología nos ayuda, no nos la dificulta.</p>   
+
+        <p><span class="term-prompt">tech@portfolio:~$</span> return_to_root.sh <span class="blink" aria-hidden="true">█</span></p>
+        
+        <a href="index.html" class="nav-link" title="Volver a la página principal del portafolio">[ RETURN_TO_ROOT ]</a>
+    </main>
+
+</body>
+</html>
