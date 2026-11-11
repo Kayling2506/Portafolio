@@ -1,0 +1,1642 @@
+
+/*
+  =============================================================================
+  PORTAFOLIO OFICIAL - LUIS ENRIQUE RAMÍREZ (IT & ADM)
+  Sistema de Diseño, Tokens Visuales y Estilos Responsive
+  
+  Copyright (c) 2026 Luis Enrique Ramírez. Todos los derechos reservados.
+  
+  [ AVISO DE DERECHOS DE AUTOR Y PROPIEDAD INTELECTUAL ]
+  El diseño de interfaz, paleta de colores, animaciones, componentes retro
+  y maquetación responsive son propiedad intelectual exclusiva de Luis Enrique Ramírez.
+  Prohibido el plagio o uso no autorizado de estos estilos visuales.
+  
+  =============================================================================
+  TABLA DE CONTENIDOS (CSS INDEX)
+  1. Variables y Configuración Inicial
+  2. Estilos del Hero (Split-Screen)
+  3. Barra de Navegación (Navbar)
+  4. Sección Sobre Mí (Logs / Trayectoria)
+  5. Banner de Tecnología Aplicada (Labs)
+  6. Tarjetas de Servicios (Archive)
+  7. Pie de Página Retro (Arcade Footer)
+  8. Componentes Flotantes (Toast & Modal WhatsApp)
+  =============================================================================
+*/
+
+        :root {
+            /* Colores base y fondos */
+            --bg: #ffffff;
+            --text: #21364a;
+            --color-bg-light: #f5f9ff;
+            --color-bg-dark: #0d0e12;
+            --color-text-main: #21364a;
+            --color-text-muted: #94a3b8;
+
+            /* Identidad de marca y acentos neón */
+            --hero-lime: #17ff02;        /* Verde neón / lima principal */
+            --hero-indigo: #111111;      /* Fondo oscuro secundario */
+            --hero-dark-text: #121829;   /* Contraste para textos oscuros */
+            --card-accent: #ff5f38;      /* Color de acento coral */
+            --border-glow: rgba(23, 255, 2, 0.25);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Reset global basado en tu hoja de estilos anterior */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* ==========================================
+           ESTILOS DEL HERO (SPLIT-SCREEN)
+           ========================================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        /* Contenedor dividido en 60% y 40% */
+        .hero-split-container {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        /* ==========================================
+           BARRA DE NAVEGACIÓN TRASLÚCIDA (NAVBAR)
+           ========================================== */
+        .navbar {
+            position: absolute;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 2.5rem);
+            max-width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 1.5rem;
+            background: rgba(15, 23, 42, 0.6); /* Fondo oscuro traslúcido para legibilidad universal */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.3rem;
+            list-style: none !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            list-style: none !important;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .nav-links a:hover {
+                background: var(--hero-lime);
+                color: var(--hero-dark-text);
+            }
+        }
+
+        .nav-links a.active-link {
+            background: var(--hero-lime);
+            color: var(--hero-dark-text);
+        }
+
+        /* Botón hamburguesa para móviles */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            padding: 0.3rem;
+            z-index: 101;
+        }
+
+        .menu-toggle span {
+            width: 22px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-left {
+            background-color: var(--hero-indigo);
+            color: white;
+            padding: 11rem 6rem 4rem 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-left-content {
+            max-width: 580px;
+            animation: heroFadeUp 0.9s ease-out both;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.85;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-text,
+        .green-text {
+            color: var(--hero-lime, #17ff02);
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2.2rem;
+            line-height: 1.6;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* Botón de acción destacado */
+        .btn-hero {
+            background-color: var(--hero-lime) !important;
+            color: var(--hero-dark-text) !important;
+            padding: 0.9rem 1.8rem;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(198, 241, 109, 0.4);
+        }
+
+        /* Columnas informativas del pie */
+        .hero-left-footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 2rem;
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-foot-col strong {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--hero-lime);
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .hero-foot-col p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .hero-right {
+            background-color: var(--hero-lime);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ==========================================
+           FOTO DE PERFIL SUPERPUESTA 
+           ========================================== */
+        .hero-profile-container {
+            position: absolute;
+            top: 50%;
+            left: 68%; /* Alineado con el corte divisor del 60% */
+            width: 340px;
+            height: 400px;
+            z-index: 50;
+            animation: heroProfileFadeUp 1.1s ease-out both;
+        }
+
+        .profile-frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #c3cfd9; /* Fondo de respaldo */
+            border-radius: 12px;
+        }
+
+        /* El marco decorativo blanco desfasado */
+        .profile-frame::before {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            width: 100%;
+            height: 100%;
+            border: 2.5px solid #ffffff;
+            border-radius: 12px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* ==========================================
+           ELEMENTOS GEOMÉTRICOS DECORATIVOS
+           ========================================== */
+        .deco-dots {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            pointer-events: none;
+            opacity: 0.25;
+        }
+
+        .deco-dots-left {
+            top: 15%;
+            right: 8%;
+            background-image: radial-gradient(white 2px, transparent 2px);
+            background-size: 14px 14px;
+        }
+
+        .deco-dots-right {
+            bottom: 25%;
+            left: 8%;
+            background-image: radial-gradient(var(--hero-dark-text) 2px, transparent 2px);
+            background-size: 14px 14px;
+            opacity: 0.15;
+        }
+
+        .deco-zigzag {
+            position: absolute;
+            width: 80px;
+            height: 24px;
+            pointer-events: none;
+        }
+
+        .deco-zigzag-left {
+            bottom: 30%;
+            right: 15%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='20' viewBox='0 0 60 20'%3E%3Cpath d='M0,10 L10,0 L20,10 L30,0 L40,10 L50,0 L60,10' fill='none' stroke='white' stroke-width='2' stroke-opacity='0.4'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+
+        .deco-zigzag-right {
+            top: 30%;
+            left: 15%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='20' viewBox='0 0 60 20'%3E%3Cpath d='M0,10 L10,0 L20,10 L30,0 L40,10 L50,0 L60,10' fill='none' stroke='%23121829' stroke-width='2' stroke-opacity='0.25'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+
+        .deco-diamonds {
+            position: absolute;
+            bottom: 8%;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .deco-diamonds span {
+            width: 8px;
+            height: 8px;
+            background-color: var(--hero-indigo);
+            transform: rotate(45deg);
+            display: block;
+        }
+
+        .deco-diamonds span:first-child {
+            background: transparent;
+            border: 2px solid var(--hero-indigo);
+        }
+
+        /* ==========================================
+           KEYFRAMES DE LAS ANIMACIONES
+           ========================================== */
+        @keyframes heroFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animación corregida que preserva el centrado real al finalizar */
+        @keyframes heroProfileFadeUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, calc(-50% + 24px));
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* ==========================================
+           ADAPTABILIDAD RESPONSIVA (MÓVILES)
+           ========================================== */
+        @media (max-width: 992px) {
+            .hero-split-container {
+                grid-template-columns: 1fr; /* Una columna vertical en pantallas chicas */
+            }
+
+            .hero-left {
+                padding: 8rem 1.5rem 4rem 1.5rem;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-left-content {
+                margin: 0 auto;
+            }
+
+            .hero-right {
+                height: 380px; /* Altura controlada para lucir la zona lima en móviles */
+            }
+
+            .hero-profile-container {
+                left: 50%;
+                top: calc(100% - 190px); /* Posicionamiento centrado flotando entre secciones */
+                width: 260px;
+                height: 310px;
+            }
+
+            .hero-left-footer {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 3rem;
+                text-align: left;
+            }
+
+            /* Habilitar botón hamburguesa */
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                padding-top: 1rem;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 0.6rem 1rem;
+            }
+
+            /* navbar colapsable */
+            .navbar {
+                flex-wrap: wrap;
+                border-radius: 20px;
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        /* Reset local y tipografía */
+    .tech-hero-banner {
+        background-color: #ffffff;
+        color: #000000;
+        min-height: 100vh; /* Altura completa del viewport */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Space Mono', monospace;
+        padding: 6rem 2rem;
+        box-sizing: border-box;
+    }
+
+    /* Contenedor principal alineado y espaciado */
+    .tech-hero-container {
+        max-width: 1200px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr; /* Equilibrio visual del banner */
+        gap: 5rem;
+        align-items: center;
+        z-index: 5;
+    }
+
+    /* Microetiqueta superior para rellenar espacio de forma elegante */
+    .tech-badge {
+        display: inline-block;
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        color: var(--hero-lime);
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    /* Título enorme para pantalla completa */
+    .tech-hero-left h1 {
+        font-size: clamp(2.5rem, 5.2vw, 4.4rem); /* Escala de forma responsiva */
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+        color: #000000;
+        margin: 0;
+    }
+
+    /* Bloque del párrafo con barra de acento */
+    .tech-hero-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    .tech-accent-block {
+        border-left: 3px solid #17ff02;
+        padding-left: 2rem;
+    }
+
+    .tech-accent-block p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #414040; /* Gris ligeramente más suave para mejorar contraste */
+        max-width: 460px;
+        margin: 0;
+    }
+
+    /* Grupo de Botones */
+    .tech-action-group {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* Botón Coral Principal */
+    .btn-coral-large {
+        background-color: var(--hero-lime);
+        color: #000000;
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        padding: 1rem 2.2rem;
+        border-radius: 6px;
+        transition: all 0.25s ease;
+        border: 2px solid #17ff02;
+        cursor: pointer;
+    }
+
+    .btn-coral-large:hover {
+        background-color: #000000;
+        color: #17ff02;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(23, 255, 2, 0.4);
+    }
+
+    /* ==========================================
+       EFECTOS DE FONDO (GLOWS Y DOTS)
+       ========================================== */
+    
+    /* El destello/glow moderno */
+    .tech-glow {
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(255, 95, 56, 0.08) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* Rejilla de puntos */
+    .tech-grid-dots {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+        background-size: 40px 40px;
+        opacity: 0.5;
+        z-index: 2;
+        /* Se desvanece suavemente hacia arriba y los lados */
+        mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
+    }
+
+    /* Pequeña animación de scroll abajo */
+    .tech-scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 40px;
+        border: 2px solid rgba(61, 59, 59, 0.452);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        padding-top: 6px;
+        z-index: 5;
+        opacity: 0.6;
+    }
+
+    .tech-scroll-indicator span {
+        display: block;
+        width: 4px;
+        height: 8px;
+        background-color: #66ff01;
+        border-radius: 2px;
+        animation: techScrollAnim 1.6s infinite ease-in-out;
+    }
+
+    .services-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Zona superior oscura */
+.services-top-area {
+    background-color: var(--hero-indigo, #000000);
+    padding: 7rem 2rem 14rem 2rem; /* Espacio inferior amplio para la superposición */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.services-header-container h2 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: #00f314; /* Texto oscuro sobre fondo verde */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.services-header-container p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgb(252, 252, 252);
+    margin: 0;
+}
+
+/* Zona inferior */
+.services-bottom-area {
+    background-color: var(--bg, #ffffff);
+    padding: 0 2rem 7rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* La Rejilla mágica que se encaja hacia arriba */
+.services-grid {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem 2.5rem;
+    margin-top: -9rem; /* Eleva las tarjetas para que crucen la línea divisoria */
+    z-index: 10;
+}
+
+/* ==========================================
+   DISEÑO ESTRUCTURAL DE LAS TARJETAS (CARDS)
+   ========================================== */
+.service-card {
+    position: relative;
+    background: transparent;
+}
+
+/* El marco desfasado decorativo idéntico al de la imagen */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Se ve limpio tanto en fondo oscuro como claro */
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+/* Cuerpo real de la tarjeta en frente */
+.card-inner {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(6, 66, 231, 0.08);
+    padding: 3rem 2.2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 2;
+    box-shadow: 0 15px 35px rgba(18, 24, 41, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Títulos internos de las tarjetas */
+.card-inner h3 {
+    font-size: 1.45rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+}
+
+/* Párrafos internos (¡Justificados a la perfección!) */
+.card-inner p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #556677;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+}
+
+/* ==========================================
+   EFECTOS HOVER (ANIMACIÓN)
+   ========================================== */
+.service-card:hover .card-inner {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(18, 24, 41, 0.08);
+}
+
+.service-card:hover::before {
+    transform: translate(4px, -4px);
+}
+
+.card-link:hover {
+    opacity: 0.8;
+    transform: translateX(3px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (ADAPTABILIDAD)
+   ========================================== */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        gap: 3rem 2rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .services-top-area {
+        padding: 5rem 1.5rem 11rem 1.5rem;
+    }
+    
+    .services-bottom-area {
+        padding: 0 1.5rem 5rem 1.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 sola columna vertical en smartphones */
+        margin-top: -7rem;
+        gap: 2.5rem;
+    }
+    
+    .card-inner {
+        padding: 2.5rem 1.8rem;
+    }
+}
+
+    @keyframes techScrollAnim {
+        0% { transform: translateY(0); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(12px); opacity: 0; }
+    }
+
+    /* ==========================================
+       RESPONSIVE DESIGN (MÓVILES)
+       ========================================== */
+    @media (max-width: 992px) {
+        .tech-hero-banner {
+            padding: 8rem 1.5rem 4rem 1.5rem;
+            min-height: auto; /* Dejamos que crezca según el contenido si la pantalla es muy chica */
+        }
+
+        .tech-hero-container {
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+            text-align: left;
+        }
+
+        .tech-hero-left h1 {
+            font-size: 2.2rem;
+        }
+
+        .tech-accent-block {
+            padding-left: 1.5rem;
+        }
+
+        .tech-action-group {
+            width: 100%;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1rem;
+        }
+
+
+
+        .tech-scroll-indicator {
+            display: none; /* Se oculta en móviles para ahorrar espacio */
+        }
+    }
+
+    /* ==========================================
+   ESTILOS DE LA SECCIÓN SOBRE MÍ
+   ========================================== */
+
+.about-section {
+    width: 100%;
+    background-color: var(--bg, #fafafd); /* Fondo claro de contraste con el hero */
+    padding: 8rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Equilibrio simétrico tipo bento */
+    gap: 5rem;
+    align-items: center;
+}
+
+/* ==========================================
+   BLOQUE VISUAL: LA TERMINAL INTERACTIVA
+   ========================================== */
+.about-visual-panel {
+    position: relative;
+    width: 100%;
+}
+
+.tech-terminal {
+    width: 100%;
+    background-color: var(--hero-indigo, #111111); /* Fondo oscuro terminal */
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(18, 24, 41, 0.12);
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Cabecera del sistema */
+.terminal-header {
+    background-color: #1a1f2c;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.terminal-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.term-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.term-dot.red { background-color: #ff5f56; }
+.term-dot.yellow { background-color: #ffbd2e; }
+.term-dot.green { background-color: #27c93f; }
+
+.terminal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+}
+
+/* Interior de la consola */
+.terminal-body {
+    padding: 2rem;
+    font-family: 'Space Mono', monospace; /* Tipografía técnica monoespaciada */
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+.term-line {
+    margin-bottom: 0.8rem;
+}
+
+.term-prompt {
+    color: var(--hero-lime, #17ff02); /* Verde de prompt en terminal */
+    font-weight: 700;
+}
+
+.term-code {
+    font-family: 'Space Mono', monospace;
+    color: #a5b4fc;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    border-left: 2px solid var(--hero-lime, #17ff02);
+}
+
+/* Métricas de carga */
+.term-metrics {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.metric-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.metric-bar-bg {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.metric-bar-fill {
+    height: 100%;
+    background-color: var(--hero-lime, #17ff02); /* Barra de progreso con resplandor neón */
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(23, 255, 2, 0.5);
+}
+
+/* Cursor parpadeante */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.cursor {
+    color: var(--hero-lime, #17ff02);
+    animation: blink 1s infinite;
+}
+
+/* Marco exterior desfasado decorativo */
+.about-deco-frame {
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--hero-indigo, #111111); /* Borde desfasado estilo brutalista */
+    border-radius: 10px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ==========================================
+   BLOQUE TEXTO NARRATIVO
+   ========================================== */
+.about-content-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--hero-indigo, #111111);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-content-panel h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.2;
+    color: var(--hero-indigo, #111111);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+}
+
+/* Párrafo con justificación equilibrada */
+.about-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+}
+
+/* Rejilla de etiquetas de habilidades */
+.about-tags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+}
+
+.tech-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    background-color: #ffffff;
+    color: var(--hero-indigo, #111111);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(18, 24, 41, 0.1);
+    box-shadow: 0 4px 10px rgba(18, 24, 41, 0.02);
+}
+
+/* ===================================================
+   RESPONSIVIDAD: SECCIÓN SOBRE MÍ & TERMINAL
+   =================================================== */
+
+/* --- 1. TABLETS Y PANTALLAS MEDIANAS (Menos de 992px) --- */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr; /* Columna única vertical */
+        gap: 3.5rem;
+    }
+
+    .about-section {
+        padding: 6rem 1.5rem;
+    }
+
+    .about-visual-panel {
+        max-width: 550px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* --- 2. CELULARES ESTÁNDAR (Menos de 768px) --- */
+@media (max-width: 768px) {
+    .terminal-body {
+        padding: 1.25rem; /* Reducimos espacio interno para aprovechar el ancho de pantalla */
+        font-size: 0.85rem; /* Tipografía un poco más compacta para que no se encime */
+    }
+
+    .term-code {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* Ajustamos el marco decorativo para evitar que empuje la pantalla y genere scroll horizontal */
+    .about-deco-frame {
+        bottom: -10px;
+        left: -10px;
+    }
+
+    .about-content-panel h2 {
+        margin-bottom: 1.2rem;
+    }
+
+    .about-text {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+}
+
+/* --- 3. CELULARES ULTRA-COMPACTOS (Menos de 480px) --- */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 4rem 1rem;
+    }
+
+    .terminal-header {
+        padding: 0.6rem 1rem;
+    }
+
+    /* Ocultamos el título central "sys_profile.sh" en pantallas mini para que no choque con los círculos de colores */
+    .terminal-title {
+        display: none;
+    }
+
+    .terminal-body {
+        padding: 1rem;
+        font-size: 0.78rem;
+    }
+
+    .term-code {
+        font-size: 0.72rem;
+        white-space: pre-wrap; /* Clave: Obliga al código JSON a saltar de línea si el celular es muy angosto */
+    }
+
+    .metric-label {
+        font-size: 0.75rem;
+    }
+
+    /* Ajuste fino a las etiquetas de habilidades para que no se amontonen */
+    .about-tags-grid {
+        gap: 0.4rem;
+    }
+
+    .tech-tag {
+        font-size: 0.72rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* ===================================================
+   DISEÑO INNOVADOR: TARJETA EMBLEMA DE CIERRE (GLOW)
+   =================================================== */
+
+.tech-emblem-card {
+    position: relative;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    background: #111111; /* Color oscuro puro a juego con la terminal */
+    border: 1px solid rgba(23, 255, 2, 0.15); /* Borde sutil verde lima */
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(17, 17, 17, 0.15);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* El efecto "Glow" radial de fondo */
+.emblem-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(23, 255, 2, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.emblem-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+/* Contenedor del Icono Tecnológico */
+.emblem-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background: rgba(23, 255, 2, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(23, 255, 2, 0.3);
+}
+
+.emblem-icon svg {
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(0 0 5px rgba(23, 255, 2, 0.5));
+}
+
+/* Estilo del texto emotivo */
+.emblem-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #e2e8f0; /* Blanco suave técnico de alta legibilidad */
+    margin: 0;
+    text-align: left;
+}
+
+/* Efecto Hover interactivo */
+.tech-emblem-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(23, 255, 2, 0.4);
+    box-shadow: 0 25px 45px rgba(23, 255, 2, 0.05);
+}
+
+.about-content-panel blockquote {
+    border-left: 3px solid #17ff02; /* Color verde lima de tu paleta */
+    background: rgba(23, 255, 2, 0.03); 
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.about-content-panel blockquote strong {
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+/* ===================================================
+   ADAPTABILIDAD RESPONSIVA DE LA TARJETA EMBLEMA
+   =================================================== */
+@media (max-width: 576px) {
+    .tech-emblem-card {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .emblem-content {
+        flex-direction: column; /* Icono arriba y texto abajo en pantallas chicas */
+        gap: 1rem;
+    }
+
+    .emblem-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .emblem-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* ===================================================
+   SECCIÓN DE ARCADE FOOTER & UTILIDADES DE TEXTO
+   =================================================== */
+.hero-foot-col p,
+.text-justify {
+    text-align: justify;
+}
+
+.arcade-footer {
+    width: 100%;
+    background: #050505;
+    color: #00FF41;
+    font-family: 'Space Mono', 'Courier New', Courier, monospace;
+    border-top: 4px solid #00FF41;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card p {
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-word;
+}
+
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 255, 65, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+/* Alien Pixel Art (CSS puro) */
+.pixel-alien { display: inline-block; }
+.row { display: flex; }
+.p { width: 10px; height: 10px; background: #00FF41; }
+i { width: 10px; height: 10px; }
+.alien-zone { text-align: center; }
+.alien-status { font-size: 0.7rem; display: block; margin-top: 10px; }
+
+/* Layout Footer */
+.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; flex: 1; }
+.footer-col h3 { border-bottom: 2px solid #00FF41; padding-bottom: 5px; margin-bottom: 15px; }
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col a { color: #00FF41; text-decoration: none; display: block; padding: 5px 0; transition: background 0.2s ease, color 0.2s ease; }
+.footer-col a:hover { background: #00FF41; color: #000; }
+
+.start-btn { display: inline-block; padding: 10px; border: 2px solid #00FF41; color: #00FF41; margin-top: 10px; text-decoration: none; font-weight: bold; transition: background 0.2s ease, color 0.2s ease; }
+.start-btn:hover { background: #00FF41; color: #000; }
+
+.blink { animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+@media (max-width: 768px) {
+    .arcade-footer {
+        padding: 3rem 1rem 2rem 1rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col h3 {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-col a, 
+    .footer-col p, 
+    .inventory-bar span {
+        font-size: 0.85rem;
+    }
+    
+    .start-btn {
+        align-self: center;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .pixel-alien i, 
+    .pixel-alien .p {
+        width: 4px;
+        height: 4px;
+    }
+
+    .alien-zone {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Toast Notification (Estilo Terminal Retro) */
+.toast-notification {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 2rem;
+    background: #050505;
+    color: #00FF41;
+    border: 2px solid #00FF41;
+    padding: 0.8rem 1.2rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    box-shadow: 0 10px 25px rgba(0, 255, 65, 0.2);
+    border-radius: 4px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================================================
+   BANNER ALERTA: NO LLAMADAS / SOLO WHATSAPP
+   =================================================== */
+.wa-banner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 1rem;
+}
+
+.wa-banner-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wa-banner-card {
+    background: #0b0c10;
+    border: 2px solid #17ff02;
+    box-shadow: 0 0 35px rgba(23, 255, 2, 0.3), inset 0 0 15px rgba(23, 255, 2, 0.05);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    padding: 1.5rem;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.wa-banner-overlay.active .wa-banner-card {
+    transform: scale(1);
+}
+
+.wa-banner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(23, 255, 2, 0.25);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.wa-banner-header h3 {
+    color: #17ff02;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.close-banner-btn {
+    background: transparent;
+    border: none;
+    color: #17ff02;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-banner-btn:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+}
+
+.wa-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(23, 255, 2, 0.1);
+    border: 1px solid rgba(23, 255, 2, 0.4);
+    color: #17ff02;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.04em;
+}
+
+.wa-status-dot {
+    width: 8px;
+    height: 8px;
+    background: #17ff02;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #17ff02;
+    animation: blink 1.2s infinite ease-in-out;
+}
+
+.wa-banner-text {
+    font-size: 1.02rem;
+    color: #f1f5f9;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.wa-alien-zone {
+    text-align: center;
+    background: rgba(255, 59, 59, 0.05);
+    border: 1px dashed rgba(255, 59, 59, 0.4);
+    padding: 1.2rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+
+.red-alien .p {
+    background: #ff3b3b;
+    box-shadow: 0 0 6px rgba(255, 59, 59, 0.8);
+}
+
+.wa-red-warning {
+    color: #ff3b3b;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 0.88rem;
+    margin-top: 0.8rem;
+    letter-spacing: 0.03em;
+    text-shadow: 0 0 10px rgba(255, 59, 59, 0.4);
+}
+
+.wa-banner-subtext {
+    font-size: 0.88rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.btn-wa-confirm {
+    display: block;
+    width: 100%;
+    background: #17ff02;
+    color: #000000;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 20px rgba(23, 255, 2, 0.4);
+    letter-spacing: 0.03em;
+}
+
+.btn-wa-confirm:hover,
+.btn-wa-confirm:focus-visible {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(23, 255, 2, 0.7);
+    outline: none;
+}
+
+/* ===================================================
+   BOTÓN FLOTANTE: VOLVER ARRIBA (SCROLL TO TOP)
+   =================================================== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(13, 14, 18, 0.88);
+    color: var(--hero-lime, #17ff02);
+    border: 1.5px solid rgba(23, 255, 2, 0.45);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 15px rgba(23, 255, 2, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    background: var(--hero-lime, #17ff02);
+    color: #000000;
+    border-color: var(--hero-lime, #17ff02);
+    box-shadow: 0 0 25px rgba(23, 255, 2, 0.65);
+    transform: translateY(-3px);
+}
+
+.scroll-top-btn:active {
+    transform: translateY(0) scale(0.92);
+}
+
+.scroll-top-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.scroll-top-btn svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.25s ease;
+}
+
+.scroll-top-btn:hover svg {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        display: none !important;
+    }
+
+    .toast-notification {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+
+
+
