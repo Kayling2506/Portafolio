@@ -3,25 +3,25 @@
       cctv: {
         title: "1. CCTV & Videovigilancia",
         cards: [
-          { tag: "CCTV & IP", title: "Despliegue NVR & Cámaras IP", text: "Instalación, cableado estructurado y configuración de sistema de videovigilancia híbrido Hikvision.", img: "assets/img/proyecto-cctv-1.jpg" },
-          { tag: "ANALÓGICO/IP", title: "Configuración XVR Híbrido", text: "Integración de cámaras analógicas HD con módulos IP y optimización de disco duro de grabación.", img: "assets/img/proyecto-cctv-2.jpg" },
-          { tag: "REMOTA", title: "Visualización Remota Segura", text: "Configuración de acceso P2P y reglas de router para monitoreo desde apps móviles.", img: "assets/img/proyecto-cctv-3.jpg" }
+          { tag: "CCTV & IP", title: "Despliegue NVR & Cámaras IP", text: "Instalación, cableado estructurado y configuración de sistema de videovigilancia híbrido Hikvision.", img: "img/Portadas/cctv.webp" },
+          { tag: "ANALÓGICO/IP", title: "Configuración XVR Híbrido", text: "Integración de cámaras analógicas HD con módulos IP y optimización de disco duro de grabación.", img: "img/Portadas/Pruebas.jpg" },
+          { tag: "REMOTA", title: "Visualización Remota Segura", text: "Configuración de acceso P2P y reglas de router para monitoreo desde apps móviles.", img: "img/Portadas/Pruebas.jpg" }
         ]
       },
       redes: {
         title: "2. Redes & Cableado Estructurado",
         cards: [
-          { tag: "REDES", title: "Peinado y Organización de Racks", text: "Reestructuración de cableado, etiquetado de puertos patch panel y ordenamiento de switches.", img: "assets/img/proyecto-redes-1.jpg" },
-          { tag: "DIAGNÓSTICO", title: "Certificación de Puntos de Red", text: "Pruebas de continuidad y mapeo de UTP Cat6 para eliminación de latencia en oficinas.", img: "assets/img/proyecto-redes-2.jpg" },
-          { tag: "WIFI", title: "Despliegue de Access Points", text: "Instalación y configuración de APs con cobertura unificada para redes escolares.", img: "assets/img/proyecto-redes-3.jpg" }
+          { tag: "REDES", title: "Peinado y Organización de Racks", text: "Reestructuración de cableado, etiquetado de puertos patch panel y ordenamiento de switches.", img: "img/Portadas/Pruebas.jpg" },
+          { tag: "DIAGNÓSTICO", title: "Certificación de Puntos de Red", text: "Pruebas de continuidad y mapeo de UTP Cat6 para eliminación de latencia en oficinas.", img: "img/Portadas/Pruebas.jpg" },
+          { tag: "WIFI", title: "Despliegue de Access Points", text: "Instalación y configuración de APs con cobertura unificada para redes escolares.", img: "img/Portadas/Pruebas.jpg" }
         ]
       },
       soporte: {
         title: "3. Soporte Técnico & Hardware",
         cards: [
-          { tag: "HARDWARE", title: "Mantenimiento Preventivo / Correctivo", text: "Reemplazo térmico, limpieza profunda de disipación y optimización general de componentes.", img: "assets/img/proyecto-hardware-1.jpg" },
-          { tag: "REPARACIÓN", title: "Reconstrucción de Bisagras", text: "Reparación estructural de chasis y bisagras en laps de uso rudo sin afectar la pantalla.", img: "assets/img/proyecto-hardware-2.jpg" },
-          { tag: "UPGRADE", title: "Actualización masiva a SSD", text: "Migración de discos mecánicos a estado sólido clonando sistemas operativos sin pérdida de datos.", img: "assets/img/proyecto-hardware-3.jpg" }
+          { tag: "HARDWARE", title: "Mantenimiento Preventivo / Correctivo", text: "Reemplazo térmico, limpieza profunda de disipación y optimización general de componentes.", img: "img/Portadas/Pruebas.jpg" },
+          { tag: "REPARACIÓN", title: "Reconstrucción de Bisagras", text: "Reparación estructural de chasis y bisagras en laps de uso rudo sin afectar la pantalla.", img: "img/Portadas/Pruebas.jpg" },
+          { tag: "UPGRADE", title: "Actualización masiva a SSD", text: "Migración de discos mecánicos a estado sólido clonando sistemas operativos sin pérdida de datos.", img: "img/Portadas/Pruebas.jpg" }
         ]
       },
       admin: {
