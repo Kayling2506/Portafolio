@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0e12">
+    <meta name="description" content="Portafolio de Luis Enrique Ramírez - Técnico Informático y Gestor Administrativo. Soporte técnico integral, gestión de procesos y desarrollo de páginas web básicas.">
+    <meta name="keywords" content="Técnico en Informática, Soporte Informático, Gestión Administrativa, Páginas Web Básicas, Portafolios, Luis Enrique Ramírez">
+    <meta name="author" content="Luis Enrique Ramirez">
+    
+    <!-- Seguridad y Privacidad Web -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' ws:; object-src 'none'; base-uri 'self'; form-action 'self';">
+
+    <!-- Open Graph / Meta etiquetas para Redes Sociales (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IT & ADM | Luis Enrique Ramírez">
+    <meta property="og:title" content="Portafolio Técnico en Informática & Gestión Administrativa | Luis Enrique Ramírez">
+    <meta property="og:description" content="Soporte técnico integral, instalación de CCTV y gestión administrativa.">
+    <meta property="og:image" content="img/Person_Pixel Art.webp">
+    <meta property="og:locale" content="es_MX">
+    
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portafolio Técnico en Informática & Gestión Administrativa | Luis Enrique Ramírez">
+    <meta name="twitter:description" content="Soporte técnico integral, instalación de CCTV y gestión administrativa.">
+    <meta name="twitter:image" content="img/Person_Pixel Art.webp">
+
+    <title>Proyectos | Luis Enrique Ramírez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="Logo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="Logo.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="Js/script.js" defer></script>
+    <script src="Js/Poker.js" defer></script>
+    <link rel="stylesheet" href="Css/Poker.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+  <!-- MODAL 3D DINÁMICO (PANTALLA COMPLETA) -->
+  <div class="deck-modal" id="deckModal">
+    <button class="btn-close-modal" id="btnCloseModal" title="Cerrar vista">&times;</button>
+    
+    <div class="modal-header-info">
+      <h3 id="modalCategoryTitle">Categoría</h3>
+    </div>
+
+    <div class="deck-container-3d" id="modalDeckContainer">
+      <!-- Las cartas en 3D se inyectan dinámicamente vía JS -->
+    </div>
+
+    <div class="modal-controls">
+      <button class="btn-deck-next" id="btnNextCard">
+        Siguiente caso <span class="btn-arrow">&rarr;</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- SECCIÓN PRINCIPAL DE PROYECTOS -->
+  <main class="main-section">
+    <div class="section-container">
+      
+      <!-- BOTÓN REGRESAR EN LA PARTE SUPERIOR DE LA PÁGINA -->
+      <div class="section-top-navigation">
+        <a href="index.html" class="btn-back">
+          <span class="btn-arrow">&lt;</span> Regresar al inicio
+        </a>
+      </div>
+
+      <!-- ENCABEZADO DE LA PÁGINA -->
+      <header class="section-header">
+        <h2 class="section-title">Proyectos & Casos de Campo</h2>
+        <p class="section-description">
+          Explora mis intervenciones clasificadas en 6 áreas clave. Haz clic sobre la baraja de cualquier apartado para abrir la experiencia interactiva 3D con las imágenes reales y detalles técnicos.
+        </p>
+      </header>
+
+      <!-- REJILLA DE LOS 6 APARTADOS DE BARAJA -->
+      <div class="categories-grid">
+
+        <!-- 1. CCTV & VIDEOVIGILANCIA -->
+        <article class="category-block">
+          <h3 class="category-title">1. CCTV & Videovigilancia</h3>
+          <div class="deck-preview-wrapper" onclick="openDeckModal('cctv')" title="Clic para interactuar en 3D">
+            <div class="preview-deck">
+              <div class="preview-card p-card-1">
+                <div class="p-card-media">
+                  <img src="assets/img/proyecto-cctv-1.jpg" alt="CCTV" class="p-card-img">
+                  <span class="p-tag">CCTV & IP</span>
+                </div>
+                <div class="p-card-info">
+                  <h4>Despliegue NVR & Cámaras IP</h4>
+                  <p>Videovigilancia híbrida y gestión remota.</p>
+                </div>
+              </div>
+              <div class="preview-card p-card-2"></div>
+              <div class="preview-card p-card-3"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. REDES & CABLEADO -->
+        <article class="category-block">
+          <h3 class="category-title">2. Redes & Cableado</h3>
+          <div class="deck-preview-wrapper" onclick="openDeckModal('redes')" title="Clic para interactuar en 3D">
+            <div class="preview-deck">
+              <div class="preview-card p-card-1">
+                <div class="p-card-media">
+                  <img src="assets/img/proyecto-redes-1.jpg" alt="Redes" class="p-card-img">
+                  <span class="p-tag">REDES</span>
+                </div>
+                <div class="p-card-info">
+                  <h4>Organización de Racks</h4>
+                  <p>Peinado de patch panels y certificación.</p>
+                </div>
+              </div>
+              <div class="preview-card p-card-2"></div>
+              <div class="preview-card p-card-3"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. SOPORTE TÉCNICO & HARDWARE -->
+        <article class="category-block">
+          <h3 class="category-title">3. Soporte Técnico & Hardware</h3>
+          <div class="deck-preview-wrapper" onclick="openDeckModal('soporte')" title="Clic para interactuar en 3D">
+            <div class="preview-deck">
+              <div class="preview-card p-card-1">
+                <div class="p-card-media">
+                  <img src="assets/img/proyecto-hardware-1.jpg" alt="Hardware" class="p-card-img">
+                  <span class="p-tag">HARDWARE</span>
+                </div>
+                <div class="p-card-info">
+                  <h4>Mantenimiento Crítico</h4>
+                  <p>Diagnóstico térmico y rescate de portátiles.</p>
+                </div>
+              </div>
+              <div class="preview-card p-card-2"></div>
+              <div class="preview-card p-card-3"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. INFORMÁTICA ADMINISTRATIVA -->
+        <article class="category-block">
+          <h3 class="category-title">4. Informática Administrativa</h3>
+          <div class="deck-preview-wrapper" onclick="openDeckModal('admin')" title="Clic para interactuar en 3D">
+            <div class="preview-deck">
+              <div class="preview-card p-card-1">
+                <div class="p-card-media">
+                  <img src="assets/img/proyecto-admin-1.jpg" alt="Bases de Datos" class="p-card-img">
+                  <span class="p-tag">GESTIÓN TI</span>
+                </div>
+                <div class="p-card-info">
+                  <h4>Optimización de Bases de Datos</h4>
+                  <p>Centralización de procesos y backups.</p>
+                </div>
+              </div>
+              <div class="preview-card p-card-2"></div>
+              <div class="preview-card p-card-3"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. EDTECH & LMS MOODLE -->
+        <article class="category-block">
+          <h3 class="category-title">5. EdTech & LMS Moodle</h3>
+          <div class="deck-preview-wrapper" onclick="openDeckModal('edtech')" title="Clic para interactuar en 3D">
+            <div class="preview-deck">
+              <div class="preview-card p-card-1">
+                <div class="p-card-media">
+                  <img src="assets/img/proyecto-moodle-1.jpg" alt="Moodle" class="p-card-img">
+                  <span class="p-tag">EDTECH</span>
+                </div>
+                <div class="p-card-info">
+                  <h4>Administración Moodle LMS</h4>
+                  <p>Sistemas escolares, alta afluencia y respaldos.</p>
+                </div>
+              </div>
+              <div class="preview-card p-card-2"></div>
+              <div class="preview-card p-card-3"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. SEGURIDAD & RESPALDO -->
+        <article class="category-block">
+          <h3 class="category-title">6. Seguridad & Respaldo</h3>
+          <div class="deck-preview-wrapper" onclick="openDeckModal('seguridad')" title="Clic para interactuar en 3D">
+            <div class="preview-deck">
+              <div class="preview-card p-card-1">
+                <div class="p-card-media">
+                  <img src="assets/img/proyecto-forense-1.jpg" alt="Respaldo" class="p-card-img">
+                  <span class="p-tag">SEGURIDAD</span>
+                </div>
+                <div class="p-card-info">
+                  <h4>Recuperación de Información</h4>
+                  <p>Rescates en discos dañados y políticas VPN.</p>
+                </div>
+              </div>
+              <div class="preview-card p-card-2"></div>
+              <div class="preview-card p-card-3"></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================
+     SECCIÓN: FOOTER (REDES & CONTACTO)
+     ========================================== -->
+<footer class="arcade-footer" id="Contacto">
+    <!-- Efecto CRT Scanlines (Creatividad visual) -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <div class="footer-wrapper">
+        <!-- El Alien de 8 bits -->
+        <div class="alien-zone">
+            <div class="pixel-alien">
+                <div class="row"><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+                <div class="row"><i></i><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+                <div class="row"><i></i><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i><i></i></div>
+                <div class="row"><i></i><div class="p"></div><div class="p"></div><i></i><div class="p"></div><div class="p"></div><div class="p"></div><i></i><div class="p"></div><div class="p"></div><i></i></div>
+                <div class="row"><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i></div>
+                <div class="row"><i></i><div class="p"></div><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i><div class="p"></div><i></i><i></i></div>
+                <div class="row"><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+            </div>
+            <span class="alien-status">ALIEN_DEBUG: 01</span>
+        </div>
+
+        <!-- Secciones del Footer -->
+        <div class="footer-grid">
+            <!-- Columna 1: Contacto -->
+            <div class="footer-col">
+                <h3>[ REDES / COM ]</h3>
+                <ul>
+                    <li><a href="mailto:monstesinos1504@gmail.com">› GMAIL: Contacto</a></li>
+                    <li><a href="https://www.linkedin.com/in/luis-enrique-ramirez-montesinos-566067312/" target="_blank" rel="noopener noreferrer">› LINKEDIN: Profesional</a></li>
+                    <li><a href="https://profile.indeed.com/p/luisenriquer-6pw5rjm" target="_blank" rel="noopener noreferrer">› INDEED: Trayectoria</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Inventario -->
+            <div class="footer-col">
+            <h3>[ INVENTARIO ]</h3>
+                <div class="inventory-bar">
+                    <span>Hardware & Soporte</span><br>
+                    <span>Administración</span><br>
+                    <span>Bases de Datos</span><br>
+                    <span>Orden y Gestión</span>
+                </div>
+            </div>
+
+            <!-- Columna 3: Sistema -->
+            <div class="footer-col">
+                <h3>[ SISTEMA ]</h3>
+                <p>Nivel: TECNICO TI</p>
+                <p>Status: <span class="blink">READY</span></p>
+                <a href="easter-egg.html" class="start-btn">INSERT COIN (START)</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
