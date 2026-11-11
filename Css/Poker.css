@@ -1,0 +1,432 @@
+/* ==========================================================
+   ESTILOS DE LA BARAJA 3D Y MODAL (CORREGIDOS Y AISLADOS)
+   ========================================================== */
+
+:root {
+  --card-bg: #151b23;
+  --card-border: #212830;
+  --accent-green: #17ff02;
+  --text-main: #f0f6fc;
+  --text-muted: #8b949e;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Forzamos el contenedor principal de la página de proyectos */
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: var(--font-sans);
+  color: #111111;
+}
+
+.main-section {
+  width: 100%;
+  padding: 40px 0 60px 0;
+}
+
+.section-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* BOTÓN DE REGRESO EN LA PARTE SUPERIOR */
+.section-top-navigation {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--card-border);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-back:hover {
+  background-color: #1c242f;
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+  transform: translateX(-3px);
+  box-shadow: 0 0 15px rgba(23, 255, 2, 0.3);
+}
+
+.btn-arrow {
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+/* ENCABEZADO */
+.section-header {
+  margin-bottom: 35px;
+}
+
+.section-title {
+  color: #0f172a;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.5rem;
+  background-color: var(--accent-green);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(23, 255, 2, 0.6);
+}
+
+.section-description {
+  color: #333333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0;
+}
+
+/* REJILLA DE 6 APARTADOS */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 45px 30px;
+  margin-top: 30px;
+}
+
+.category-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  color: #0f172a;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+/* BARAJA PREVIA */
+.deck-preview-wrapper {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview-deck {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.preview-card {
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.p-card-1 {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-card-2 {
+  top: 14px;
+  left: 8px;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.p-card-3 {
+  top: 28px;
+  left: 16px;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.p-card-media {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background-color: #0d1117;
+}
+
+.p-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.p-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--accent-green);
+  background-color: rgba(21, 27, 35, 0.85);
+  border: 1px solid var(--accent-green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.p-card-info {
+  padding: 12px 16px;
+}
+
+.p-card-info h4 {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.p-card-info p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.deck-preview-wrapper:hover .p-card-1 {
+  transform: translateY(-6px);
+  border-color: var(--accent-green);
+  box-shadow: 0 0 20px rgba(23, 255, 2, 0.4);
+}
+
+.deck-preview-wrapper:hover .p-card-2 {
+  transform: translateY(-2px) translateX(4px);
+}
+
+.deck-preview-wrapper:hover .p-card-3 {
+  transform: translateX(8px);
+}
+
+.preview-hint {
+  margin-top: 10px;
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ==========================================================
+   MODAL PANTALLA COMPLETA 3D (AISLADO Y FORZADO OSCURO)
+   ========================================================== */
+.deck-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(5, 7, 10, 0.95) !important;
+  backdrop-filter: blur(12px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  perspective: 1200px;
+}
+
+.deck-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-header-info h3 {
+  color: var(--accent-green) !important;
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.btn-close-modal {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-close-modal:hover {
+  color: var(--accent-green);
+}
+
+.deck-container-3d {
+  position: relative;
+  width: 92%;
+  max-width: 640px;  
+  height: 520px;     
+}
+/* TARJETAS 3D EN EL MODAL (Fondo oscuro forzado para evitar el cuadro blanco) */
+.deck-modal .card-3d {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  background-color: #151b23 !important;
+  border: 1px solid #212830 !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              opacity 0.4s ease, 
+              border-color 0.3s ease;
+  user-select: none;
+}
+
+.deck-modal .card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;     /* Más respiro interno */
+  box-sizing: border-box;
+  background-color: transparent !important;
+}
+
+.deck-modal .card-media {
+  position: relative;
+  width: 100%;
+  height: 310px;     /* Imagen más grande y vistosa al abrir */
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #0d1117;
+}
+
+.deck-modal .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.deck-modal .card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(21, 27, 35, 0.9);
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.deck-modal .card-content {
+  padding-top: 14px;
+  background-color: transparent !important;
+}
+
+.deck-modal .card-title {
+  color: #f0f6fc !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.deck-modal .card-text {
+  color: #8b949e !important;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* POSICIONAMIENTO 3D DE LA BARAJA */
+.card-3d:nth-child(1) {
+  transform: translateY(0) scale(1) rotate(0deg);
+  z-index: 4;
+}
+
+.card-3d:nth-child(2) {
+  transform: translateY(14px) scale(0.95) rotate(-2deg);
+  z-index: 3;
+  opacity: 0.9;
+}
+
+.card-3d:nth-child(3) {
+  transform: translateY(28px) scale(0.9) rotate(2.5deg);
+  z-index: 2;
+  opacity: 0.75;
+}
+
+.card-3d:nth-child(n+4) {
+  transform: translateY(40px) scale(0.85) rotate(-1deg);
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.card-3d.dismissing {
+  transform: translateX(130%) rotate(20deg) scale(0.9) !important;
+  opacity: 0 !important;
+  z-index: 10 !important;
+}
+
+.modal-controls {
+  margin-top: 35px;
+  z-index: 10;
+}
+
+.btn-deck-next {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--accent-green);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 20px rgba(23, 255, 2, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-deck-next:hover {
+  background-color: #1c242f;
+  color: var(--accent-green);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 0 30px rgba(23, 255, 2, 0.6);
+}
