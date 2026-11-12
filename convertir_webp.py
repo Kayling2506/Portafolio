@@ -9,7 +9,7 @@ def convertir_a_webp(ruta_origen, calidad=80):
     :param calidad: Calidad de compresión WebP (1-100). Por defecto 80.
     """
     # Extensiones permitidas
-    extensiones_validas = ('.png', '.jpg', '.jpeg')
+    extensiones_validas = ('.png', '.jpg', '.jpeg', 'HEIC', '.heic')
     
     # Crear carpeta de salida si no existe
     carpeta_salida = os.path.join(ruta_origen, "convertidas_webp")
