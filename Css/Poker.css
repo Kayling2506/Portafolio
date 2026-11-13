@@ -5,9 +5,9 @@
   --card-layer-shadow: #383b42; /* El tono gris oscuro desfasado detrás de tus tarjetas */
   --border-subtle: rgba(255, 255, 255, 0.12);
   --hero-lime: #17ff02;
-  --hero-dark-text: #050505;
+  --hero-dark-text: #ffffff;
   --text-main: #ffffff;
-  --text-muted: #9ca3af;
+  --text-muted: #ffffff;
 }
 
 * {
