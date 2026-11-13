@@ -1,371 +1,371 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0d0e12">
-    <meta name="description" content="Portafolio de Luis Enrique Ramírez - Técnico Informático y Gestor Administrativo. Soporte técnico integral, gestión de procesos y desarrollo de páginas web básicas.">
-    <meta name="keywords" content="Técnico en Informática, Soporte Informático, Gestión Administrativa, Páginas Web Básicas, Portafolios, Luis Enrique Ramírez">
-    <meta name="author" content="Luis Enrique Ramirez">
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="theme-color" content="#0d0e12">
+      <meta name="description" content="Portafolio de Luis Enrique Ramírez - Técnico Informático y Gestor Administrativo. Soporte técnico integral, gestión de procesos y desarrollo de páginas web básicas.">
+      <meta name="keywords" content="Técnico en Informática, Soporte Informático, Gestión Administrativa, Páginas Web Básicas, Portafolios, Luis Enrique Ramírez">
+      <meta name="author" content="Luis Enrique Ramirez">
+      
+      <!-- Seguridad y Privacidad Web -->
+      <meta name="referrer" content="strict-origin-when-cross-origin">
+      <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' ws:; object-src 'none'; base-uri 'self'; form-action 'self';">
+
+      <!-- Open Graph / Meta etiquetas para Redes Sociales (WhatsApp, LinkedIn, Facebook) -->
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="IT & ADM | Luis Enrique Ramírez">
+      <meta property="og:title" content="Portafolio Técnico en Informática & Gestión Administrativa | Luis Enrique Ramírez">
+      <meta property="og:description" content="Soporte técnico integral, instalación de CCTV y gestión administrativa.">
+      <meta property="og:image" content="img/Person_Pixel Art.webp">
+      <meta property="og:locale" content="es_MX">
+      
+      
+      <!-- Twitter Cards -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Portafolio Técnico en Informática & Gestión Administrativa | Luis Enrique Ramírez">
+      <meta name="twitter:description" content="Soporte técnico integral, instalación de CCTV y gestión administrativa.">
+      <meta name="twitter:image" content="img/Person_Pixel Art.webp">
+
+      <title>Proyectos | Luis Enrique Ramírez</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="icon" href="Logo.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" href="Logo.ico">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+      <script src="Js/script.js" defer></script>
+      <script src="Js/Poker.js" defer></script>
+      <link rel="stylesheet" href="Css/Poker.css">
+      <link rel="stylesheet" href="Css/style.css">
+  </head>
+  <body>
+  <!-- ENCABEZADO TIPO TERMINAL -->
+    <header class="logs-header">
+      <div class="container">
+        <div class="back-nav-container">
+        <a href="index.html" class="back-btn">
+        <span class="back-icon">&larr;</span>
+        <span class="back-text">[ REGRESAR ]</span>
+        </a>
+      </div>
+        <div class="status-pill">
+          <span class="pulse-dot"></span> SYSTEM_LOGS // ARCHIVO DE CASOS
+        </div>
+        <h1>Soluciones que <span class="lime-accent">resuelven</span>, no complican.</h1>
+        <p class="subtitle">
+          Registro técnico de incidencias críticas, mantenimiento de hardware, administración de plataformas y despliegues en entornos reales. Haz clic en cualquier expediente para ver el diagnóstico completo.
+        </p>
+
+        <!-- FILTROS POR ESPECIALIDAD -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">[ TODOS ]</button>
+          <button class="filter-btn" data-filter="soporte">[ SOPORTE & HARDWARE ]</button>
+          <button class="filter-btn" data-filter="sistemas">[ SISTEMAS & REDES ]</button>
+          <button class="filter-btn" data-filter="edtech">[ EDTECH & GESTIÓN ]</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CUADRÍCULA DE EXPEDIENTES / PROYECTOS -->
+    <main class="container">
+      <section class="projects-grid">
+
+        <!-- CASO 1 -->
+        <article class="case-card" data-category="soporte" onclick="openCaseModal('case-1')">
+          <div class="case-img-wrapper">
+            <img src="img/Portadas/respaldos.webp" alt="Mantenimiento preventivo y diagnóstico" loading="lazy">
+            <span class="case-tag">SOPORTE TÉCNICO</span>
+            <span class="case-id">#LOG-01</span>
+          </div>
+          <div class="case-body">
+            <h3>Rescate de Equipos por Humedad y Corrosión</h3>
+            <p>Analisis sobre el problema y las soluciones implementadas para poder salvar y evaluar el uso del equipo</p>
+            <div class="case-footer">
+              <span class="tech-stack">Hardware • Diagnóstico</span>
+              <span class="read-more">Ver solución &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASO 2 -->
+        <article class="case-card" data-category="sistemas" onclick="openCaseModal('case-2')">
+          <div class="case-img-wrapper">
+            <img src="img/Portadas/Computadoras.webp" alt="Organización de Racks y Cableado" loading="lazy">
+            <span class="case-tag">SOPORTE TÉCNICO</span>
+            <span class="case-id">#LOG-02</span>
+          </div>
+          <div class="case-body">
+            <h3>Aceleración del Hardware y ruido intermitente</h3>
+            <p>Analisis sobre el problema y las soluciones implementadas para poder salvar y evaluar el uso del equipo</p>
+            <div class="case-footer">
+              <span class="tech-stack">Hardware • Diagnóstico</span>
+              <span class="read-more">Ver solución &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASO 3 -->
+        <article class="case-card" data-category="edtech" onclick="openCaseModal('case-3')">
+          <div class="case-img-wrapper">
+            <img src="img/Portadas/Servidores.jpg" alt="Recuperación de base de datos Moodle" loading="lazy">
+            <span class="case-tag">EDTECH & DB</span>
+            <span class="case-id">#LOG-03</span>
+          </div>
+          <div class="case-body">
+            <h3>Recuperación de Plataforma Moodle bajo Presión</h3>
+            <p>Restauración de integridad en base de datos MariaDB/MySQL y restablecimiento del servicio educativo en tiempo récord.</p>
+            <div class="case-footer">
+              <span class="tech-stack">MySQL • Linux • Moodle</span>
+              <span class="read-more">Ver solución &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASO 4 -->
+        <article class="case-card" data-category="edtech" onclick="openCaseModal('case-4')">
+          <div class="case-img-wrapper">
+            <img src="img/gestion.webp" alt="Portal de Control Escolar" loading="lazy">
+            <span class="case-tag">INFORMÁTICA ADM.</span>
+            <span class="case-id">#LOG-04</span>
+          </div>
+          <div class="case-body">
+            <h3>Automatización de Control Escolar y Correo</h3>
+            <p>Configuración de SMTP institucional y flujos administrativos sin fricción para docentes y personal.</p>
+            <div class="case-footer">
+              <span class="tech-stack">WordPress • SMTP • Gestión</span>
+              <span class="read-more">Ver solución &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+
+    <!-- =====================================================================================================
+        MODALES DE DIAGNÓSTICO (DETALLE DE SOLUCIÓN)
+        ===================================================================================================== -->
     
-    <!-- Seguridad y Privacidad Web -->
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' ws:; object-src 'none'; base-uri 'self'; form-action 'self';">
-
-    <!-- Open Graph / Meta etiquetas para Redes Sociales (WhatsApp, LinkedIn, Facebook) -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="IT & ADM | Luis Enrique Ramírez">
-    <meta property="og:title" content="Portafolio Técnico en Informática & Gestión Administrativa | Luis Enrique Ramírez">
-    <meta property="og:description" content="Soporte técnico integral, instalación de CCTV y gestión administrativa.">
-    <meta property="og:image" content="img/Person_Pixel Art.webp">
-    <meta property="og:locale" content="es_MX">
-    
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portafolio Técnico en Informática & Gestión Administrativa | Luis Enrique Ramírez">
-    <meta name="twitter:description" content="Soporte técnico integral, instalación de CCTV y gestión administrativa.">
-    <meta name="twitter:image" content="img/Person_Pixel Art.webp">
-
-    <title>Proyectos | Luis Enrique Ramírez</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="Logo.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="Logo.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script src="Js/script.js" defer></script>
-    <script src="Js/Poker.js" defer></script>
-    <link rel="stylesheet" href="Css/Poker.css">
-    <link rel="stylesheet" href="Css/style.css">
-</head>
-<body>
-<!-- ENCABEZADO TIPO TERMINAL -->
-  <header class="logs-header">
-    <div class="container">
-      <div class="back-nav-container">
-      <a href="index.html" class="back-btn">
-      <span class="back-icon">&larr;</span>
-      <span class="back-text">[ REGRESAR ]</span>
-      </a>
-    </div>
-      <div class="status-pill">
-        <span class="pulse-dot"></span> SYSTEM_LOGS // ARCHIVO DE CASOS
-      </div>
-      <h1>Soluciones que <span class="lime-accent">resuelven</span>, no complican.</h1>
-      <p class="subtitle">
-        Registro técnico de incidencias críticas, mantenimiento de hardware, administración de plataformas y despliegues en entornos reales. Haz clic en cualquier expediente para ver el diagnóstico completo.
-      </p>
-
-      <!-- FILTROS POR ESPECIALIDAD -->
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">[ TODOS ]</button>
-        <button class="filter-btn" data-filter="soporte">[ SOPORTE & HARDWARE ]</button>
-        <button class="filter-btn" data-filter="sistemas">[ SISTEMAS & REDES ]</button>
-        <button class="filter-btn" data-filter="edtech">[ EDTECH & GESTIÓN ]</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- CUADRÍCULA DE EXPEDIENTES / PROYECTOS -->
-  <main class="container">
-    <section class="projects-grid">
-
-      <!-- CASO 1 -->
-      <article class="case-card" data-category="soporte" onclick="openCaseModal('case-1')">
-        <div class="case-img-wrapper">
-          <img src="img/Portadas/respaldos.webp" alt="Mantenimiento preventivo y diagnóstico" loading="lazy">
-          <span class="case-tag">SOPORTE TÉCNICO</span>
-          <span class="case-id">#LOG-01</span>
+    <!-- Modal Caso 1 -->
+    <div id="case-1" class="modal-overlay" onclick="outsideClick(event, 'case-1')">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeCaseModal('case-1')">&times;</button>
+        <div class="modal-header">
+          <span class="badge-lime">EXPEDIENTE #LOG-01 // RESUELTO</span>
+          <h2>Rescate de Equipos por Humedad y Corrosión</h2>
         </div>
-        <div class="case-body">
-          <h3>Rescate de Equipos por Humedad y Corrosión</h3>
-          <p>Analisis sobre el problema y las soluciones implementadas para poder salvar y evaluar el uso del equipo</p>
-          <div class="case-footer">
-            <span class="tech-stack">Hardware • Diagnóstico</span>
-            <span class="read-more">Ver solución &rarr;</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- CASO 2 -->
-      <article class="case-card" data-category="sistemas" onclick="openCaseModal('case-2')">
-        <div class="case-img-wrapper">
-          <img src="img/Portadas/Computadoras.webp" alt="Organización de Racks y Cableado" loading="lazy">
-          <span class="case-tag">REDES & CCTV</span>
-          <span class="case-id">#LOG-02</span>
-        </div>
-        <div class="case-body">
-          <h3>Aceleración del Hardware y ruido intermitente</h3>
-          <p>Analisis sobre el problema y las soluciones implementadas para poder salvar y evaluar el uso del equipo</p>
-          <div class="case-footer">
-            <span class="tech-stack">Redes • CCTV • NVR</span>
-            <span class="read-more">Ver solución &rarr;</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- CASO 3 -->
-      <article class="case-card" data-category="edtech" onclick="openCaseModal('case-3')">
-        <div class="case-img-wrapper">
-          <img src="img/Portadas/Servidores.jpg" alt="Recuperación de base de datos Moodle" loading="lazy">
-          <span class="case-tag">EDTECH & DB</span>
-          <span class="case-id">#LOG-03</span>
-        </div>
-        <div class="case-body">
-          <h3>Recuperación de Plataforma Moodle bajo Presión</h3>
-          <p>Restauración de integridad en base de datos MariaDB/MySQL y restablecimiento del servicio educativo en tiempo récord.</p>
-          <div class="case-footer">
-            <span class="tech-stack">MySQL • Linux • Moodle</span>
-            <span class="read-more">Ver solución &rarr;</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- CASO 4 -->
-      <article class="case-card" data-category="edtech" onclick="openCaseModal('case-4')">
-        <div class="case-img-wrapper">
-          <img src="img/gestion.webp" alt="Portal de Control Escolar" loading="lazy">
-          <span class="case-tag">INFORMÁTICA ADM.</span>
-          <span class="case-id">#LOG-04</span>
-        </div>
-        <div class="case-body">
-          <h3>Automatización de Control Escolar y Correo</h3>
-          <p>Configuración de SMTP institucional y flujos administrativos sin fricción para docentes y personal.</p>
-          <div class="case-footer">
-            <span class="tech-stack">WordPress • SMTP • Gestión</span>
-            <span class="read-more">Ver solución &rarr;</span>
-          </div>
-        </div>
-      </article>
-
-    </section>
-  </main>
-
-
-  <!-- =====================================================================================================
-       MODALES DE DIAGNÓSTICO (DETALLE DE SOLUCIÓN)
-       ===================================================================================================== -->
-  
-  <!-- Modal Caso 1 -->
-  <div id="case-1" class="modal-overlay" onclick="outsideClick(event, 'case-1')">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeCaseModal('case-1')">&times;</button>
-      <div class="modal-header">
-        <span class="badge-lime">EXPEDIENTE #LOG-01 // RESUELTO</span>
-        <h2>Rescate de Equipos por Humedad y Corrosión</h2>
-      </div>
-      <div class="modal-grid">
-        <img src="img/convertidas_webp/Soporte_y_Harware/Mantenimiento_Caso8.webp" alt="Evidencia Caso 1" class="modal-evidence">
-        <div class="modal-details">
-          <div class="detail-block">
-            <h4>[ 01. EL PROBLEMA ]</h4>
-            <p>Equipo presento problemas de lentitud como problemas de teclado y de batería, anteriormente a ello el cliente informo que el equipo era de guerra, sufria de golpes, caidas y varias veces sufrio derrames, sin presentar falla alguna.</p>
-          </div>
-          <div class="detail-block">
-            <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
-            <p>Tras un analisis exhaustivo, se identificaron los componentes dañados por la humedad y corrosión. Se procedió con la limpieza y se determino que la humedad y los golpes ya no representaban un riesgo para el funcionamiento del equipo, pero no era recomendable cambio de piezas por el costo y vida del equipo, se opto por la compra de un nuevo equipo.</p>
-          </div>
-          <div class="detail-tags">
-            <span>Mantenimiento</span>
-            <span>Diagnostico</span>
-            <span>Videovigilancia NVR</span>
+        <div class="modal-grid">
+          <img src="img/convertidas_webp/Soporte_y_Harware/Mantenimiento_Caso8.webp" alt="Evidencia Caso 1" class="modal-evidence">
+          <div class="modal-details">
+            <div class="detail-block">
+              <h4>[ 01. EL PROBLEMA ]</h4>
+              <p>Equipo presento problemas de lentitud como problemas de teclado y de batería, anteriormente a ello el cliente informo que el equipo era de guerra, sufria de golpes, caidas y varias veces sufrio derrames, sin presentar falla alguna.</p>
+            </div>
+            <div class="detail-block">
+              <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
+              <p>Tras un analisis exhaustivo, se identificaron los componentes dañados por la humedad y corrosión. Se procedió con la limpieza y se determino que la humedad y los golpes ya no representaban un riesgo para el funcionamiento del equipo, pero no era recomendable cambio de piezas por el costo y vida del equipo, se opto por la compra de un nuevo equipo.</p>
+            </div>
+            <div class="detail-tags">
+              <span>Mantenimiento</span>
+              <span>Diagnostico</span>
+              <span>Videovigilancia NVR</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Modal Caso 2 -->
-  <div id="case-2" class="modal-overlay" onclick="outsideClick(event, 'case-2')">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeCaseModal('case-2')">&times;</button>
-      <div class="modal-header">
-        <span class="badge-lime">EXPEDIENTE #LOG-02 // RESUELTO</span>
-        <h2>Aceleración del Hardware y ruido intermitente</h2>
-      </div>
-      <div class="modal-grid">
-        <img src="img/convertidas_webp/Soporte_y_Harware/Caso de Mantenimiento_Caso3.webp" alt="Evidencia Caso 2" class="modal-evidence">
-        <div class="modal-details">
-          <div class="detail-block">
-            <h4>[ 01. EL PROBLEMA ]</h4>
-            <p>Presentaba signos de aceleración del hardware y ruido intermitente durante el funcionamiento inactivo del equipo, como en momento de trabajo alto generaba mucho ruido.</p>
-          </div>
-          <div class="detail-block">
-            <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
-            <p>Se realizo un mantenminiento correctivo sobre el equipo, para evitar la acumulación de polvo, como la aplicación de pasta termica para mejorar la disipacion de calor.</p>
-          </div>
-          <div class="detail-tags">
-            <span>Mantenimiento</span>
-            <span>Diagnostico</span>
+    <!-- Modal Caso 2 -->
+    <div id="case-2" class="modal-overlay" onclick="outsideClick(event, 'case-2')">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeCaseModal('case-2')">&times;</button>
+        <div class="modal-header">
+          <span class="badge-lime">EXPEDIENTE #LOG-02 // RESUELTO</span>
+          <h2>Aceleración del Hardware y ruido intermitente</h2>
+        </div>
+        <div class="modal-grid">
+          <img src="img/convertidas_webp/Soporte_y_Harware/Caso de Mantenimiento_Caso3.webp" alt="Evidencia Caso 2" class="modal-evidence">
+          <div class="modal-details">
+            <div class="detail-block">
+              <h4>[ 01. EL PROBLEMA ]</h4>
+              <p>Presentaba signos de aceleración del hardware y ruido intermitente durante el funcionamiento inactivo del equipo, como en momento de trabajo alto generaba mucho ruido.</p>
+            </div>
+            <div class="detail-block">
+              <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
+              <p>Se realizo un mantenminiento correctivo sobre el equipo, para evitar la acumulación de polvo, como la aplicación de pasta termica para mejorar la disipacion de calor.</p>
+            </div>
+            <div class="detail-tags">
+              <span>Mantenimiento</span>
+              <span>Diagnostico</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Modal Caso 3 -->
-  <div id="case-3" class="modal-overlay" onclick="outsideClick(event, 'case-3')">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeCaseModal('case-3')">&times;</button>
-      <div class="modal-header">
-        <span class="badge-lime">EXPEDIENTE #LOG-03 // RESUELTO</span>
-        <h2>Recuperación de Plataforma Moodle bajo Presión</h2>
-      </div>
-      <div class="modal-grid">
-        <img src="img/Portadas/Computadoras.webp" alt="Evidencia Caso 3" class="modal-evidence">
-        <div class="modal-details">
-          <div class="detail-block">
-            <h4>[ 01. EL PROBLEMA ]</h4>
-            <p>Corrupción en tablas críticas de la base de datos dejó inaccesible el aula virtual en pleno periodo de evaluaciones.</p>
-          </div>
-          <div class="detail-block">
-            <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
-            <p>Acceso vía SSH al servidor, aislamiento del servicio web, reparación de tablas dañadas en MariaDB/MySQL y validación de integridad de respaldos, logrando restablecer el acceso completo en menos de 45 minutos sin pérdida de calificaciones.</p>
-          </div>
-          <div class="detail-tags">
-            <span>MySQL / MariaDB</span>
-            <span>SSH & Linux</span>
-            <span>Administración Moodle</span>
+    <!-- Modal Caso 3 -->
+    <div id="case-3" class="modal-overlay" onclick="outsideClick(event, 'case-3')">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeCaseModal('case-3')">&times;</button>
+        <div class="modal-header">
+          <span class="badge-lime">EXPEDIENTE #LOG-03 // RESUELTO</span>
+          <h2>Recuperación de Plataforma Moodle bajo Presión</h2>
+        </div>
+        <div class="modal-grid">
+          <img src="img/Portadas/Computadoras.webp" alt="Evidencia Caso 3" class="modal-evidence">
+          <div class="modal-details">
+            <div class="detail-block">
+              <h4>[ 01. EL PROBLEMA ]</h4>
+              <p>Corrupción en tablas críticas de la base de datos dejó inaccesible el aula virtual en pleno periodo de evaluaciones.</p>
+            </div>
+            <div class="detail-block">
+              <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
+              <p>Acceso vía SSH al servidor, aislamiento del servicio web, reparación de tablas dañadas en MariaDB/MySQL y validación de integridad de respaldos, logrando restablecer el acceso completo en menos de 45 minutos sin pérdida de calificaciones.</p>
+            </div>
+            <div class="detail-tags">
+              <span>MySQL / MariaDB</span>
+              <span>SSH & Linux</span>
+              <span>Administración Moodle</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Modal Caso 4 -->
-  <div id="case-4" class="modal-overlay" onclick="outsideClick(event, 'case-4')">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeCaseModal('case-4')">&times;</button>
-      <div class="modal-header">
-        <span class="badge-lime">EXPEDIENTE #LOG-04 // RESUELTO</span>
-        <h2>Automatización de Control Escolar y Correo</h2>
-      </div>
-      <div class="modal-grid">
-        <img src="img/gestion.webp" alt="Evidencia Caso 4" class="modal-evidence">
-        <div class="modal-details">
-          <div class="detail-block">
-            <h4>[ 01. EL PROBLEMA ]</h4>
-            <p>Las notificaciones automáticas del portal escolar caían en spam o no llegaban a los alumnos, generando saturación en ventanilla administrativa.</p>
-          </div>
-          <div class="detail-block">
-            <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
-            <p>Implementación de autenticación SPF/DKIM en el dominio, configuración de WP Mail SMTP y redacción de guías visuales simples para que el personal administrativo operara el sistema con total autonomía.</p>
-          </div>
-          <div class="detail-tags">
-            <span>EdTech</span>
-            <span>WP Mail SMTP</span>
-            <span>Gestión Administrativa</span>
+    <!-- Modal Caso 4 -->
+    <div id="case-4" class="modal-overlay" onclick="outsideClick(event, 'case-4')">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeCaseModal('case-4')">&times;</button>
+        <div class="modal-header">
+          <span class="badge-lime">EXPEDIENTE #LOG-04 // RESUELTO</span>
+          <h2>Automatización de Control Escolar y Correo</h2>
+        </div>
+        <div class="modal-grid">
+          <img src="img/gestion.webp" alt="Evidencia Caso 4" class="modal-evidence">
+          <div class="modal-details">
+            <div class="detail-block">
+              <h4>[ 01. EL PROBLEMA ]</h4>
+              <p>Las notificaciones automáticas del portal escolar caían en spam o no llegaban a los alumnos, generando saturación en ventanilla administrativa.</p>
+            </div>
+            <div class="detail-block">
+              <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
+              <p>Implementación de autenticación SPF/DKIM en el dominio, configuración de WP Mail SMTP y redacción de guías visuales simples para que el personal administrativo operara el sistema con total autonomía.</p>
+            </div>
+            <div class="detail-tags">
+              <span>EdTech</span>
+              <span>WP Mail SMTP</span>
+              <span>Gestión Administrativa</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- JAVASCRIPT PARA FILTROS Y MODALES -->
-  <script>
-    // Filtrado de tarjetas
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.case-card');
+    <!-- JAVASCRIPT PARA FILTROS Y MODALES -->
+    <script>
+      // Filtrado de tarjetas
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.case-card');
 
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
 
-        const filter = btn.getAttribute('data-filter');
+          const filter = btn.getAttribute('data-filter');
 
-        cards.forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category') === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
+          cards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
         });
       });
-    });
 
-    // Apertura y cierre de modales
-    function openCaseModal(id) {
-      document.getElementById(id).classList.add('show');
-      document.body.style.overflow = 'hidden'; // Evita scroll de fondo
-    }
-
-    function closeCaseModal(id) {
-      document.getElementById(id).classList.remove('show');
-      document.body.style.overflow = 'auto';
-    }
-
-    function outsideClick(event, id) {
-      if (event.target.id === id) {
-        closeCaseModal(id);
+      // Apertura y cierre de modales
+      function openCaseModal(id) {
+        document.getElementById(id).classList.add('show');
+        document.body.style.overflow = 'hidden'; // Evita scroll de fondo
       }
-    }
 
-    // Cerrar con tecla Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.show').forEach(modal => {
-          modal.classList.remove('show');
-          document.body.style.overflow = 'auto';
-        });
+      function closeCaseModal(id) {
+        document.getElementById(id).classList.remove('show');
+        document.body.style.overflow = 'auto';
       }
-    });
-  </script>
-  <!-- ==========================================
-     SECCIÓN: FOOTER (REDES & CONTACTO)
-     ========================================== -->
-<footer class="arcade-footer" id="Contacto">
-    <!-- Efecto CRT Scanlines (Creatividad visual) -->
-    <div class="scanlines" aria-hidden="true"></div>
 
-    <div class="footer-wrapper">
-        <!-- El Alien de 8 bits -->
-        <div class="alien-zone">
-            <div class="pixel-alien">
-                <div class="row"><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
-                <div class="row"><i></i><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
-                <div class="row"><i></i><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i><i></i></div>
-                <div class="row"><i></i><div class="p"></div><div class="p"></div><i></i><div class="p"></div><div class="p"></div><div class="p"></div><i></i><div class="p"></div><div class="p"></div><i></i></div>
-                <div class="row"><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i></div>
-                <div class="row"><i></i><div class="p"></div><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i><div class="p"></div><i></i><i></i></div>
-                <div class="row"><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
-            </div>
-            <span class="alien-status">ALIEN_DEBUG: 01</span>
-        </div>
+      function outsideClick(event, id) {
+        if (event.target.id === id) {
+          closeCaseModal(id);
+        }
+      }
 
-        <!-- Secciones del Footer -->
-        <div class="footer-grid">
-            <!-- Columna 1: Contacto -->
-            <div class="footer-col">
-                <h3>[ REDES / COM ]</h3>
-                <ul>
-                    <li><a href="mailto:monstesinos1504@gmail.com">› GMAIL: Contacto</a></li>
-                    <li><a href="https://www.linkedin.com/in/luis-enrique-ramirez-montesinos-566067312/" target="_blank" rel="noopener noreferrer">› LINKEDIN: Profesional</a></li>
-                    <li><a href="https://profile.indeed.com/p/luisenriquer-6pw5rjm" target="_blank" rel="noopener noreferrer">› INDEED: Trayectoria</a></li>
-                </ul>
-            </div>
+      // Cerrar con tecla Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.modal-overlay.show').forEach(modal => {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+          });
+        }
+      });
+    </script>
+    <!-- ==========================================
+      SECCIÓN: FOOTER (REDES & CONTACTO)
+      ========================================== -->
+  <footer class="arcade-footer" id="Contacto">
+      <!-- Efecto CRT Scanlines (Creatividad visual) -->
+      <div class="scanlines" aria-hidden="true"></div>
 
-            <!-- Columna 2: Inventario -->
-            <div class="footer-col">
-            <h3>[ INVENTARIO ]</h3>
-                <div class="inventory-bar">
-                    <span>Hardware & Soporte</span><br>
-                    <span>Administración</span><br>
-                    <span>Bases de Datos</span><br>
-                    <span>Orden y Gestión</span>
-                </div>
-            </div>
+      <div class="footer-wrapper">
+          <!-- El Alien de 8 bits -->
+          <div class="alien-zone">
+              <div class="pixel-alien">
+                  <div class="row"><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+                  <div class="row"><i></i><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+                  <div class="row"><i></i><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i><i></i></div>
+                  <div class="row"><i></i><div class="p"></div><div class="p"></div><i></i><div class="p"></div><div class="p"></div><div class="p"></div><i></i><div class="p"></div><div class="p"></div><i></i></div>
+                  <div class="row"><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i></div>
+                  <div class="row"><i></i><div class="p"></div><i></i><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><i></i><div class="p"></div><i></i><i></i></div>
+                  <div class="row"><i></i><i></i><div class="p"></div><i></i><i></i><i></i><i></i><i></i><div class="p"></div><i></i><i></i></div>
+              </div>
+              <span class="alien-status">ALIEN_DEBUG: 01</span>
+          </div>
 
-            <!-- Columna 3: Sistema -->
-            <div class="footer-col">
-                <h3>[ SISTEMA ]</h3>
-                <p>Nivel: TECNICO TI</p>
-                <p>Status: <span class="blink">READY</span></p>
-                <a href="easter-egg.html" class="start-btn">INSERT COIN (START)</a>
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+          <!-- Secciones del Footer -->
+          <div class="footer-grid">
+              <!-- Columna 1: Contacto -->
+              <div class="footer-col">
+                  <h3>[ REDES / COM ]</h3>
+                  <ul>
+                      <li><a href="mailto:monstesinos1504@gmail.com">› GMAIL: Contacto</a></li>
+                      <li><a href="https://www.linkedin.com/in/luis-enrique-ramirez-montesinos-566067312/" target="_blank" rel="noopener noreferrer">› LINKEDIN: Profesional</a></li>
+                      <li><a href="https://profile.indeed.com/p/luisenriquer-6pw5rjm" target="_blank" rel="noopener noreferrer">› INDEED: Trayectoria</a></li>
+                  </ul>
+              </div>
+
+              <!-- Columna 2: Inventario -->
+              <div class="footer-col">
+              <h3>[ INVENTARIO ]</h3>
+                  <div class="inventory-bar">
+                      <span>Hardware & Soporte</span><br>
+                      <span>Administración</span><br>
+                      <span>Bases de Datos</span><br>
+                      <span>Orden y Gestión</span>
+                  </div>
+              </div>
+
+              <!-- Columna 3: Sistema -->
+              <div class="footer-col">
+                  <h3>[ SISTEMA ]</h3>
+                  <p>Nivel: TECNICO TI</p>
+                  <p>Status: <span class="blink">READY</span></p>
+                  <a href="easter-egg.html" class="start-btn">INSERT COIN (START)</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+  </html>
