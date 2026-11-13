@@ -40,179 +40,272 @@
     <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
+<!-- ENCABEZADO TIPO TERMINAL -->
+  <header class="logs-header">
+    <div class="container">
+      <div class="status-pill">
+        <span class="pulse-dot"></span> SYSTEM_LOGS // ARCHIVO DE CASOS
+      </div>
+      <h1>Soluciones que <span class="lime-accent">resuelven</span>, no complican.</h1>
+      <p class="subtitle">
+        Registro técnico de incidencias críticas, mantenimiento de hardware, administración de plataformas y despliegues en entornos reales. Haz clic en cualquier expediente para ver el diagnóstico completo.
+      </p>
 
-  <!-- MODAL 3D DINÁMICO (PANTALLA COMPLETA) -->
-  <div class="deck-modal" id="deckModal">
-    <button class="btn-close-modal" id="btnCloseModal" title="Cerrar vista">&times;</button>
-    
-    <div class="modal-header-info">
-      <h3 id="modalCategoryTitle">Categoría</h3>
+      <!-- FILTROS POR ESPECIALIDAD -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">[ TODOS ]</button>
+        <button class="filter-btn" data-filter="soporte">[ SOPORTE & HARDWARE ]</button>
+        <button class="filter-btn" data-filter="sistemas">[ SISTEMAS & REDES ]</button>
+        <button class="filter-btn" data-filter="edtech">[ EDTECH & GESTIÓN ]</button>
+      </div>
     </div>
+  </header>
 
-    <div class="deck-container-3d" id="modalDeckContainer">
-      <!-- Las cartas en 3D se inyectan dinámicamente vía JS -->
-    </div>
+  <!-- CUADRÍCULA DE EXPEDIENTES / PROYECTOS -->
+  <main class="container">
+    <section class="projects-grid">
 
-    <div class="modal-controls">
-      <button class="btn-deck-next" id="btnNextCard">
-        Siguiente caso <span class="btn-arrow">&rarr;</span>
-      </button>
+      <!-- CASO 1 -->
+      <article class="case-card" data-category="soporte" onclick="openCaseModal('case-1')">
+        <div class="case-img-wrapper">
+          <img src="img/mantenimiento.webp" alt="Mantenimiento preventivo y diagnóstico" loading="lazy">
+          <span class="case-tag">SOPORTE TÉCNICO</span>
+          <span class="case-id">#LOG-01</span>
+        </div>
+        <div class="case-body">
+          <h3>Rescate Térmico y Mantenimiento Crítico</h3>
+          <p>Diagnóstico de sobrecalentamiento, limpieza profunda y optimización de equipos de cómputo en entorno escolar.</p>
+          <div class="case-footer">
+            <span class="tech-stack">Hardware • Diagnóstico</span>
+            <span class="read-more">Ver solución &rarr;</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASO 2 -->
+      <article class="case-card" data-category="sistemas" onclick="openCaseModal('case-2')">
+        <div class="case-img-wrapper">
+          <img src="img/racks.webp" alt="Organización de Racks y Cableado" loading="lazy">
+          <span class="case-tag">REDES & CCTV</span>
+          <span class="case-id">#LOG-02</span>
+        </div>
+        <div class="case-body">
+          <h3>Reestructuración de Racks y Sistema NVR</h3>
+          <p>Peinado de patch panels, certificación de nodos de red y estabilización de videovigilancia IP.</p>
+          <div class="case-footer">
+            <span class="tech-stack">Redes • CCTV • NVR</span>
+            <span class="read-more">Ver solución &rarr;</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASO 3 -->
+      <article class="case-card" data-category="edtech" onclick="openCaseModal('case-3')">
+        <div class="case-img-wrapper">
+          <img src="img/moodle.webp" alt="Recuperación de base de datos Moodle" loading="lazy">
+          <span class="case-tag">EDTECH & DB</span>
+          <span class="case-id">#LOG-03</span>
+        </div>
+        <div class="case-body">
+          <h3>Recuperación de Plataforma Moodle bajo Presión</h3>
+          <p>Restauración de integridad en base de datos MariaDB/MySQL y restablecimiento del servicio educativo en tiempo récord.</p>
+          <div class="case-footer">
+            <span class="tech-stack">MySQL • Linux • Moodle</span>
+            <span class="read-more">Ver solución &rarr;</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASO 4 -->
+      <article class="case-card" data-category="edtech" onclick="openCaseModal('case-4')">
+        <div class="case-img-wrapper">
+          <img src="img/gestion.webp" alt="Portal de Control Escolar" loading="lazy">
+          <span class="case-tag">INFORMÁTICA ADM.</span>
+          <span class="case-id">#LOG-04</span>
+        </div>
+        <div class="case-body">
+          <h3>Automatización de Control Escolar y Correo</h3>
+          <p>Configuración de SMTP institucional y flujos administrativos sin fricción para docentes y personal.</p>
+          <div class="case-footer">
+            <span class="tech-stack">WordPress • SMTP • Gestión</span>
+            <span class="read-more">Ver solución &rarr;</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ==========================================
+       MODALES DE DIAGNÓSTICO (DETALLE DE SOLUCIÓN)
+       ========================================== -->
+  
+  <!-- Modal Caso 1 -->
+  <div id="case-1" class="modal-overlay" onclick="outsideClick(event, 'case-1')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeCaseModal('case-1')">&times;</button>
+      <div class="modal-header">
+        <span class="badge-lime">EXPEDIENTE #LOG-01 // RESUELTO</span>
+        <h2>Rescate Térmico y Mantenimiento Crítico</h2>
+      </div>
+      <div class="modal-grid">
+        <img src="img/mantenimiento.webp" alt="Evidencia Caso 1" class="modal-evidence">
+        <div class="modal-details">
+          <div class="detail-block">
+            <h4>[ 01. EL PROBLEMA ]</h4>
+            <p>Equipos administrativos y de laboratorio presentaban apagados repentinos y lentitud extrema debido a acumulación de polvo y pasta térmica seca.</p>
+          </div>
+          <div class="detail-block">
+            <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
+            <p>Se ejecutó un protocolo de mantenimiento preventivo por lotes: limpieza interna con aire comprimido, reemplazo de pasta térmica de alto rendimiento, verificación de voltajes en fuentes de poder y optimización de arranque del sistema operativo.</p>
+          </div>
+          <div class="detail-tags">
+            <span>Mantenimiento Preventivo</span>
+            <span>Diagnóstico de Hardware</span>
+            <span>Optimización SO</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- SECCIÓN PRINCIPAL DE PROYECTOS -->
-  <main class="main-section">
-    <div class="section-container">
-      
-      <!-- BOTÓN REGRESAR EN LA PARTE SUPERIOR DE LA PÁGINA -->
-      <div class="section-top-navigation">
-        <a href="index.html" class="btn-back">
-          <span class="btn-arrow">&lt;</span> Regresar al inicio
-        </a>
+  <!-- Modal Caso 2 -->
+  <div id="case-2" class="modal-overlay" onclick="outsideClick(event, 'case-2')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeCaseModal('case-2')">&times;</button>
+      <div class="modal-header">
+        <span class="badge-lime">EXPEDIENTE #LOG-02 // RESUELTO</span>
+        <h2>Reestructuración de Racks y Sistema NVR</h2>
       </div>
-
-      <!-- ENCABEZADO DE LA PÁGINA -->
-      <header class="section-header">
-        <h2 class="section-title">Proyectos & Casos de Campo</h2>
-        <p class="section-description">
-          Explora mis intervenciones clasificadas en 6 áreas clave. Haz clic sobre la baraja de cualquier apartado para abrir la experiencia interactiva 3D con las imágenes reales y detalles técnicos.
-        </p>
-      </header>
-
-      <!-- REJILLA DE LOS 6 APARTADOS DE BARAJA -->
-      <div class="categories-grid">
-
-        <!-- 1. CCTV & VIDEOVIGILANCIA -->
-        <article class="category-block">
-          <h3 class="category-title">1. CCTV & Videovigilancia</h3>
-          <div class="deck-preview-wrapper" onclick="openDeckModal('cctv')" title="Clic para interactuar en 3D">
-            <div class="preview-deck">
-              <div class="preview-card p-card-1">
-                <div class="p-card-media">
-                  <img src="img/Portadas/cctv.webp" alt="CCTV" class="p-card-img">
-                  <span class="p-tag">CCTV & IP</span>
-                </div>
-                <div class="p-card-info">
-                  <h4>Despliegue NVR & Cámaras IP</h4>
-                  <p>Videovigilancia híbrida y gestión remota.</p>
-                </div>
-              </div>
-              <div class="preview-card p-card-2"></div>
-              <div class="preview-card p-card-3"></div>
-            </div>
+      <div class="modal-grid">
+        <img src="img/racks.webp" alt="Evidencia Caso 2" class="modal-evidence">
+        <div class="modal-details">
+          <div class="detail-block">
+            <h4>[ 01. EL PROBLEMA ]</h4>
+            <p>Cableado desordenado en el site principal dificultaba identificar fallos de red y provocaba pérdida intermitente de señal en cámaras de seguridad.</p>
           </div>
-        </article>
-
-        <!-- 2. REDES & CABLEADO -->
-        <article class="category-block">
-          <h3 class="category-title">2. Redes & Cableado</h3>
-          <div class="deck-preview-wrapper" onclick="openDeckModal('redes')" title="Clic para interactuar en 3D">
-            <div class="preview-deck">
-              <div class="preview-card p-card-1">
-                <div class="p-card-media">
-                  <img src="img/Portadas/Servidores.jpg" alt="Redes" class="p-card-img">
-                  <span class="p-tag">REDES</span>
-                </div>
-                <div class="p-card-info">
-                  <h4>Organización de Racks</h4>
-                  <p>Peinado de patch panels y certificación.</p>
-                </div>
-              </div>
-              <div class="preview-card p-card-2"></div>
-              <div class="preview-card p-card-3"></div>
-            </div>
+          <div class="detail-block">
+            <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
+            <p>Se etiquetaron todas las líneas UTP, se realizó el peinado estructurado hacia los switches y el patch panel, y se reconfiguraron las direcciones IP estáticas del NVR para garantizar grabación continua 24/7.</p>
           </div>
-        </article>
-
-        <!-- 3. SOPORTE TÉCNICO & HARDWARE -->
-        <article class="category-block">
-          <h3 class="category-title">3. Soporte Técnico & Hardware</h3>
-          <div class="deck-preview-wrapper" onclick="openDeckModal('soporte')" title="Clic para interactuar en 3D">
-            <div class="preview-deck">
-              <div class="preview-card p-card-1">
-                <div class="p-card-media">
-                  <img src="img/Portadas/sistemas_operativos.webp" alt="Hardware" class="p-card-img">
-                  <span class="p-tag">HARDWARE</span>
-                </div>
-                <div class="p-card-info">
-                  <h4>Mantenimiento Crítico</h4>
-                  <p>Diagnóstico térmico y rescate de portátiles.</p>
-                </div>
-              </div>
-              <div class="preview-card p-card-2"></div>
-              <div class="preview-card p-card-3"></div>
-            </div>
+          <div class="detail-tags">
+            <span>Cableado Estructurado</span>
+            <span>Switches</span>
+            <span>Videovigilancia NVR</span>
           </div>
-        </article>
-
-        <!-- 4. INFORMÁTICA ADMINISTRATIVA -->
-        <article class="category-block">
-          <h3 class="category-title">4. Informática Administrativa</h3>
-          <div class="deck-preview-wrapper" onclick="openDeckModal('admin')" title="Clic para interactuar en 3D">
-            <div class="preview-deck">
-              <div class="preview-card p-card-1">
-                <div class="p-card-media">
-                  <img src="img/Portadas/bases_datos.jpg" alt="Bases de Datos" class="p-card-img">
-                  <span class="p-tag">GESTIÓN TI</span>
-                </div>
-                <div class="p-card-info">
-                  <h4>Optimización de Bases de Datos</h4>
-                  <p>Centralización de procesos y backups.</p>
-                </div>
-              </div>
-              <div class="preview-card p-card-2"></div>
-              <div class="preview-card p-card-3"></div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 5. EDTECH & LMS MOODLE -->
-        <article class="category-block">
-          <h3 class="category-title">5. EdTech & LMS Moodle</h3>
-          <div class="deck-preview-wrapper" onclick="openDeckModal('edtech')" title="Clic para interactuar en 3D">
-            <div class="preview-deck">
-              <div class="preview-card p-card-1">
-                <div class="p-card-media">
-                  <img src="img/Portadas/pexels-cottonbro-6539020.webp" alt="Moodle" class="p-card-img">
-                  <span class="p-tag">EDTECH</span>
-                </div>
-                <div class="p-card-info">
-                  <h4>Administración Moodle LMS</h4>
-                  <p>Sistemas escolares, alta afluencia y respaldos.</p>
-                </div>
-              </div>
-              <div class="preview-card p-card-2"></div>
-              <div class="preview-card p-card-3"></div>
-            </div>
-          </div>
-        </article>
-
-        <!-- 6. SEGURIDAD & RESPALDO -->
-        <article class="category-block">
-          <h3 class="category-title">6. Seguridad & Respaldo</h3>
-          <div class="deck-preview-wrapper" onclick="openDeckModal('seguridad')" title="Clic para interactuar en 3D">
-            <div class="preview-deck">
-              <div class="preview-card p-card-1">
-                <div class="p-card-media">
-                  <img src="img/Portadas/respaldos.webp" alt="Respaldo" class="p-card-img">
-                  <span class="p-tag">SEGURIDAD</span>
-                </div>
-                <div class="p-card-info">
-                  <h4>Recuperación de Información</h4>
-                  <p>Rescates en discos dañados y políticas VPN.</p>
-                </div>
-              </div>
-              <div class="preview-card p-card-2"></div>
-              <div class="preview-card p-card-3"></div>
-            </div>
-          </div>
-        </article>
-
+        </div>
       </div>
-
     </div>
-  </main>
+  </div>
 
+  <!-- Modal Caso 3 -->
+  <div id="case-3" class="modal-overlay" onclick="outsideClick(event, 'case-3')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeCaseModal('case-3')">&times;</button>
+      <div class="modal-header">
+        <span class="badge-lime">EXPEDIENTE #LOG-03 // RESUELTO</span>
+        <h2>Recuperación de Plataforma Moodle bajo Presión</h2>
+      </div>
+      <div class="modal-grid">
+        <img src="img/moodle.webp" alt="Evidencia Caso 3" class="modal-evidence">
+        <div class="modal-details">
+          <div class="detail-block">
+            <h4>[ 01. EL PROBLEMA ]</h4>
+            <p>Corrupción en tablas críticas de la base de datos dejó inaccesible el aula virtual en pleno periodo de evaluaciones.</p>
+          </div>
+          <div class="detail-block">
+            <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
+            <p>Acceso vía SSH al servidor, aislamiento del servicio web, reparación de tablas dañadas en MariaDB/MySQL y validación de integridad de respaldos, logrando restablecer el acceso completo en menos de 45 minutos sin pérdida de calificaciones.</p>
+          </div>
+          <div class="detail-tags">
+            <span>MySQL / MariaDB</span>
+            <span>SSH & Linux</span>
+            <span>Administración Moodle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Caso 4 -->
+  <div id="case-4" class="modal-overlay" onclick="outsideClick(event, 'case-4')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeCaseModal('case-4')">&times;</button>
+      <div class="modal-header">
+        <span class="badge-lime">EXPEDIENTE #LOG-04 // RESUELTO</span>
+        <h2>Automatización de Control Escolar y Correo</h2>
+      </div>
+      <div class="modal-grid">
+        <img src="img/gestion.webp" alt="Evidencia Caso 4" class="modal-evidence">
+        <div class="modal-details">
+          <div class="detail-block">
+            <h4>[ 01. EL PROBLEMA ]</h4>
+            <p>Las notificaciones automáticas del portal escolar caían en spam o no llegaban a los alumnos, generando saturación en ventanilla administrativa.</p>
+          </div>
+          <div class="detail-block">
+            <h4>[ 02. CÓMO LO SOLUCIONÉ ]</h4>
+            <p>Implementación de autenticación SPF/DKIM en el dominio, configuración de WP Mail SMTP y redacción de guías visuales simples para que el personal administrativo operara el sistema con total autonomía.</p>
+          </div>
+          <div class="detail-tags">
+            <span>EdTech</span>
+            <span>WP Mail SMTP</span>
+            <span>Gestión Administrativa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT PARA FILTROS Y MODALES -->
+  <script>
+    // Filtrado de tarjetas
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.case-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Apertura y cierre de modales
+    function openCaseModal(id) {
+      document.getElementById(id).classList.add('show');
+      document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+    }
+
+    function closeCaseModal(id) {
+      document.getElementById(id).classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    function outsideClick(event, id) {
+      if (event.target.id === id) {
+        closeCaseModal(id);
+      }
+    }
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.show').forEach(modal => {
+          modal.classList.remove('show');
+          document.body.style.overflow = 'auto';
+        });
+      }
+    });
+  </script>
   <!-- ==========================================
      SECCIÓN: FOOTER (REDES & CONTACTO)
      ========================================== -->
