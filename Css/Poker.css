@@ -146,7 +146,7 @@ body {
 
 .case-img-wrapper {
   position: relative;
-  height: 185px;
+  height: 185px;    
   overflow: hidden;
   background: #000000;
   border-radius: 13px 13px 0 0;
