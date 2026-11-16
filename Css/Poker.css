@@ -5,7 +5,7 @@
   --card-layer-shadow: #383b42; /* El tono gris oscuro desfasado detrás de tus tarjetas */
   --border-subtle: rgba(255, 255, 255, 0.12);
   --hero-lime: #17ff02;
-  --hero-dark-text: #ffffff;
+  --hero-dark-text: #050505;
   --text-main: #ffffff;
   --text-muted: #ffffff;
 }
@@ -21,13 +21,15 @@ body {
   color: var(--text-main);
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  /* Cuadrícula técnica ultra sutil sobre negro puro */
+  
+  /* Ilustración de fondo con velo negro al 84% para mantener contraste y estética dark */
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 45px 45px;
+    linear-gradient(rgba(5, 5, 5, 0.84), rgba(5, 5, 5, 0.88)); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
 .container {
   max-width: 1150px;
   margin: 0 auto;
@@ -74,6 +76,7 @@ body {
   line-height: 1.12;
   letter-spacing: -0.02em;
   margin-bottom: 0.75rem;
+  color: #ffffff !important; /* Blindaje contra reglas de style.css */
 }
 
 .lime-accent {
@@ -104,7 +107,7 @@ body {
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
   cursor: pointer;
-  transition: all 0.22s ease;
+  transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .filter-btn:hover,
@@ -113,6 +116,13 @@ body {
   color: var(--hero-dark-text);
   border-color: var(--hero-lime);
   box-shadow: 0 0 18px rgba(23, 255, 2, 0.3);
+}
+
+.filter-btn:focus-visible,
+.modal-close:focus-visible,
+.back-btn:focus-visible {
+  outline: 3px solid var(--hero-lime);
+  outline-offset: 3px;
 }
 
 /* ==========================================
@@ -126,14 +136,16 @@ body {
 }
 
 .case-card {
-  background: var(--card-black);
+  /* Capa oscura semitransparente encima de tu ilustración de fondo */
+  background: 
+    linear-gradient(180deg, rgba(17, 18, 21, 0.86) 0%, rgba(10, 10, 12, 0.95) 100%);
   border: 1px solid var(--border-subtle);
   border-radius: 14px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   position: relative;
-  /* Sombra sólida desfasada idéntica a tu diseño actual */
+  overflow: hidden;
   box-shadow: 10px 10px 0px var(--card-layer-shadow);
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -199,7 +211,8 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background: var(--card-black);
+  /* Transparente para dejar ver la ilustración de .case-card */
+  background: transparent;
   border-radius: 0 0 13px 13px;
 }
 
@@ -249,7 +262,6 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.92);
-  backdrop-filter: blur(10px);
   z-index: 999;
   align-items: center;
   justify-content: center;
@@ -291,7 +303,7 @@ body {
   font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .modal-close:hover {
@@ -398,15 +410,15 @@ body {
   border-radius: 999px;
   cursor: pointer;
   box-shadow: 4px 4px 0px rgba(56, 59, 66, 0.6);
-  transition: all 0.22s ease;
+  transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .back-btn:hover {
-  background: var(--hero-lime, #17ff02);
+  background: var(--hero-lime);
   color: #050505;
-  border-color: var(--hero-lime, #17ff02);
+  border-color: var(--hero-lime);
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px var(--hero-lime, #17ff02);
+  box-shadow: 6px 6px 0 var(--hero-lime);
 }
 
 .back-icon {
@@ -416,7 +428,7 @@ body {
 }
 
 .back-btn:hover .back-icon {
-  transform: translateX(-3px); /* La flecha se mueve sutilmente a la izquierda al hacer hover */
+  transform: translateX(-3px);
 }
 
 @keyframes fadeIn {
@@ -425,33 +437,36 @@ body {
 }
 
 @media (max-width: 768px) {
-  .modal-grid {
-    grid-template-columns: 1fr;
-  }
-  .modal-evidence {
-    height: 200px;
-  }
-  .case-card {
-    box-shadow: 7px 7px 0px var(--card-layer-shadow);
-  }
-}
-
-@media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr; /* Fuerza 1 columna exacta al 100% del ancho */
+    grid-template-columns: 1fr;
     gap: 1.8rem;
     padding: 2.5rem 0 4rem;
   }
+
   .modal-grid {
     grid-template-columns: 1fr;
   }
-  .modal-box {
-    padding: 1.4rem;
-  }
+
   .modal-evidence {
     height: 190px;
   }
+
+  .modal-box {
+    padding: 1.4rem;
+  }
+
   .case-card {
-    box-shadow: 6px 6px 0px var(--card-layer-shadow);
+    box-shadow: 6px 6px 0 var(--card-layer-shadow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
