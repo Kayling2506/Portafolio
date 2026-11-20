@@ -1,4 +1,5 @@
- // DICCIONARIO DE DATOS TÉCNICOS POR CATEGORÍA
+  
+// DICCIONARIO DE DATOS TÉCNICOS POR CATEGORÍA
     const deckModal = document.getElementById('deckModal');
     const btnCloseModal = document.getElementById('btnCloseModal');
     const modalDeckContainer = document.getElementById('modalDeckContainer');
@@ -56,6 +57,3 @@
         modalDeckContainer.appendChild(topCard);
       }, 400);
     });
-
-
-    
