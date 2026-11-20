@@ -470,3 +470,28 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+.modal-details .cyber-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  color: #51f704;
+  background-color: rgba(163, 230, 53, 0.08);
+  border: 1px solid #26f70b;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-details .cyber-link:hover {
+  background-color: #83df0c;
+  color: #0d1117; /* Contraste oscuro tipo terminal */
+  box-shadow: 0 0 12px rgba(163, 230, 53, 0.6);
+  transform: translateY(-2px);
+}
